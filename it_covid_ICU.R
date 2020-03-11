@@ -1,5 +1,4 @@
 rm(list=ls())
-setwd("~/git/mariometrics-git/COVID19/")
 library(tidyverse)
 library(nls2)
 library(mixtox)

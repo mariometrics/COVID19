@@ -10,6 +10,6 @@ Instead of the exponential formula used in the article mentioned above, I used t
 ![f(x,a,b) = a\cdot e^{b\cdot x}](https://render.githubusercontent.com/render/math?math=f(x%2Ca%2Cb)%20%3D%20a%5Ccdot%20e%5E%7Bb%5Ccdot%20x%7D)
 
 ### Result 
-
+![Alt text](//mariometrics/COVID19/figures/plot_logit_exp_Deaths_it.pdf "Optional title")
 
 

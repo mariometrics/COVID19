@@ -11,4 +11,5 @@ Instead of the exponential formula used in the article mentioned above, I used t
 
 ### Result 
 <a href="figures/plot_logit_exp_Deaths_it.pdf" class="image fit"><img src="figures/plot_logit_exp_Deaths_it.pdf" alt=""></a>
-
+<img src="./figures/plot_logit_exp_Deaths_it.pdf" width="425"/> <img src="./figures/plot_logit_exp_Deaths_it.pdf" width="425"/>
+<em>Analysis on Deaths data </em>

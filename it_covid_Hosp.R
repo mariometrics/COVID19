@@ -1,5 +1,5 @@
 rm(list=ls())
-setwd("~/git/mariometrics-git/covid19_forecasting_R")
+setwd("~/git/mariometrics-git/COVID19/")
 library(tidyverse)
 library(nls2)
 library(mixtox)
@@ -46,7 +46,7 @@ rmse_logit = rmse(Totale_TI$totale_ospedalizzati,pred_logi)
 rmse_exp = rmse(Totale_TI$totale_ospedalizzati,pred_exp)
 icu_capacity = 5090*0.25 # source: https://www.agi.it/fact-checking/news/2020-03-06/coronavirus-posti-letto-ospedali-7343251/
 
-pdf('./figures/plot_logit_exp_Hospedalized_it.pdf',height=8, width=15)
+pdf('./plot/plot_logit_exp_Hospedalized_it.pdf',height=8, width=15)
 plot(Totale_TI$totale_ospedalizzati ~ Totale_TI$data, data = Totale_TI, type = "p", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Hospedalized patients in Italy", 
      xlab = "Day since 1 Jan", ylab = "COVID19 Hospedalized patients", xlim = c(min(Totale_TI$data), (end_ep+20)), ylim = c(min(Totale_TI$totale_ospedalizzati), coeff_logit[1]*1.1))  # Census data
 curve(coeff_logit[1]/(1 + exp(-(x - coeff_logit[2])/coeff_logit[3])), add = T, col = "blue",lwd=2)  # Fitted model

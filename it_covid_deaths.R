@@ -1,5 +1,5 @@
 rm(list=ls())
-setwd("~/git/mariometrics-git/covid19_forecasting_R")
+setwd("~/git/mariometrics-git/COVID19/")
 library(tidyverse)
 library(nls2)
 library(mixtox)
@@ -51,7 +51,7 @@ icu_capacity = 5090*0.25 # source: https://www.agi.it/fact-checking/news/2020-03
 # }
 # T_d = (70/gr) + 0.03
 
-pdf('./figures/plot_logit_exp_Deaths_it.pdf',height=8, width=15)
+pdf('./plot/plot_logit_exp_Deaths_it.pdf',height=8, width=15)
 plot(Totale_deceduti$deceduti ~ Totale_deceduti$data, data = Totale_deceduti, type = "p", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Deaths in Italy", 
      xlab = "Day since 1 Jan", ylab = "COVID19 Deaths", xlim = c(min(Totale_deceduti$data), (end_ep+20)), ylim = c(min(Totale_deceduti$deceduti), coeff_logit[1]*1.1))  # Census data
 curve(coeff_logit[1]/(1 + exp(-(x - coeff_logit[2])/coeff_logit[3])), add = T, col = "blue",lwd=2)  # Fitted model

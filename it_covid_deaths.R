@@ -61,6 +61,7 @@ legend(min(Totale_deceduti$data), coeff_logit[1], legend=c("Real data","Logistic
 points(end_ep, coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3])) , pch = "X", cex = 1.3)
 text(end_ep+10,2000,paste("RMSE Logit:",round(rmse_logit,digits = 2)))
 text(end_ep+10,1800,paste("RMSE Exponential:",round(rmse_exp,digits = 2)))
-text(end_ep+10,1600,paste("Approximated Flex Date (Logit, the X on blue line):",appr_flex_date))
+text(end_ep+10,1600,paste("Approximated Flex Date (Logit, the abscissa of the X on blue line):",appr_flex_date))
+text(end_ep+10,1400,paste("Approximated Flex Peak (Logit, the ordinate of the X on blue line):",round(coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3])))))
 text(end_ep+19,50,"Mario Marchetti")
 dev.off()

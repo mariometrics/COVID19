@@ -38,6 +38,7 @@ exponential = nls(I(Totale_TI$totale_ospedalizzati ~ a * exp(b * Totale_TI$data)
 coeff_exponential = coef(exponential)
 appr_flex_date = seq(as.Date("2020-01-01"), by=1, len=end_ep)
 appr_flex_date = appr_flex_date[length(appr_flex_date)]
+appr_flex_peak = coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3]))
 
 pred_logi = predict(logit)
 pred_exp = predict(exponential)
@@ -50,13 +51,14 @@ plot(Totale_TI$totale_ospedalizzati ~ Totale_TI$data, data = Totale_TI, type = "
      xlab = "Day since 1 Jan", ylab = "COVID19 Hospedalized patients", xlim = c(min(Totale_TI$data), (end_ep+20)), ylim = c(min(Totale_TI$totale_ospedalizzati), coeff_logit[1]*1.1))  # Census data
 curve(coeff_logit[1]/(1 + exp(-(x - coeff_logit[2])/coeff_logit[3])), add = T, col = "blue",lwd=2)  # Fitted model
 curve(coeff_exponential[1]*exp(coeff_exponential[2]*x), add = T, col = "orange", lwd= 2)
-#abline(h=icu_capacity)
-legend(min(Totale_TI$data), coeff_logit[1], legend=c("Real data","Logistic Model", "Exponential Model","ICU Capacity"),
-       col=c("red","blue", "orange","black"), lty=c(NA,1,1,1), pch= c(16,NA,NA,NA), lwd = 2)
-points(end_ep, coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3])) , pch = "X", cex = 1.3)
+
+legend(end_ep+10,4400, legend=c("Real data","Logistic Model", "Exponential Model"),
+       col=c("red","blue", "orange"), lty=c(NA,1,1), pch= c(16,NA,NA), lwd = 2)
+points(end_ep, appr_flex_peak, pch = "X", cex = 1.3)
 text(end_ep+10,6000,paste("RMSE Logit:",round(rmse_logit,digits = 2)))
 text(end_ep+10,5600,paste("RMSE Exponential:",round(rmse_exp,digits = 2)))
 text(end_ep+10,5200,paste("Approximated Flex Date (Logit, the X on blue line):",appr_flex_date))
+text(end_ep+10,4800,paste("Approximated Flex Peak (Logit, the ordinate of the X on blue line):",round(appr_flex_peak)))
 text(end_ep+19,50,"Mario Marchetti")
 dev.off()
 

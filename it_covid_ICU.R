@@ -38,6 +38,7 @@ exponential = nls(I(Totale_TI$terapia_intensiva ~ a * exp(b * Totale_TI$data)), 
 coeff_exponential = coef(exponential)
 appr_flex_date = seq(as.Date("2020-01-01"), by=1, len=end_ep)
 appr_flex_date = appr_flex_date[length(appr_flex_date)]
+appr_flex_peak = coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3]))
 
 pred_logi = predict(logit)
 pred_exp = predict(exponential)
@@ -54,9 +55,10 @@ abline(h=icu_capacity)
 legend(end_ep+10, 500, legend=c("Real data","Logistic Model", "Exponential Model","ICU Capacity"),
        col=c("red","blue", "orange","black"), lty=c(NA,1,1,1), pch= c(16,NA,NA,NA), lwd = 2)
 points(end_ep, coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3])) , pch = "X", cex = 1.3)
-text(end_ep+10,750,paste("RMSE Logit:",round(rmse_logit,digits = 2)))
-text(end_ep+10,700,paste("RMSE Exponential:",round(rmse_exp,digits = 2)))
-text(end_ep+10,650,paste("Approximated Flex Date (Logit, the X on blue line):",appr_flex_date))
+text(end_ep+10,950,paste("RMSE Logit:",round(rmse_logit,digits = 2)))
+text(end_ep+10,850,paste("RMSE Exponential:",round(rmse_exp,digits = 2)))
+text(end_ep+10,750,paste("Approximated Flex Date (Logit, the abscissa of the X on blue line):",appr_flex_date))
+text(end_ep+10,650,paste("Approximated Flex Peak (Logit, the ordinate of the X on blue line):",round(appr_flex_peak)))
 text(end_ep+19,50,"Mario Marchetti")
 dev.off()
 

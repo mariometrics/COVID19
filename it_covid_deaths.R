@@ -13,9 +13,18 @@ df$data = as.POSIXlt(df$data,format = FMT)$yday
 Totale_deceduti = df[,c('data','deceduti')]
 date = df['data']
 
+# Estimate the rest parameters using a linear model
+model.0 <- lm(log(Totale_deceduti$deceduti) ~ Totale_deceduti$data, data=Totale_deceduti)  
+a.0 <- exp(coef(model.0)[1])
+b.0 <- coef(model.0)[2]
+# Starting parameters
+start <- list(a = a.0, b = b.0)
+
 # Logit estimate
 logit =  nls(Totale_deceduti$deceduti ~ SSlogis(Totale_deceduti$data, c, b, a), data = Totale_deceduti)
+#logit =  nls(Totale_deceduti$deceduti ~ -exp(c-a*exp(- Totale_deceduti$data/b)), data = Totale_deceduti, start = st, nls.control(maxiter = 500))
 coeff_logit = coef(logit)
+
 lastday = Totale_deceduti$data[nrow(date)]
 h = 100
 newdate = (lastday+1):(lastday+h+1)
@@ -24,16 +33,6 @@ pos = length(newdate) - length(predicted[round(predicted) == round(coeff_logit[1
 end_ep = newdate[pos]
 
 # Exponential estimate
-
-# Select an approximate $\theta$, since theta must be lower than min(y), and greater than zero
-
-# Estimate the rest parameters using a linear model
-model.0 <- lm(log(Totale_deceduti$deceduti) ~ Totale_deceduti$data, data=Totale_deceduti)  
-a.0 <- exp(coef(model.0)[1])
-b.0 <- coef(model.0)[2]
-
-# Starting parameters
-start <- list(a = a.0, b = b.0)
 exponential = nls(I(Totale_deceduti$deceduti ~ a * exp(b * Totale_deceduti$data)), data = Totale_deceduti, start = start)
 coeff_exponential = coef(exponential)
 appr_flex_date = seq(as.Date("2020-01-01"), by=1, len=end_ep)
@@ -44,11 +43,10 @@ pred_exp = predict(exponential)
 rmse_logit = rmse(Totale_deceduti$deceduti,pred_logi)
 rmse_exp = rmse(Totale_deceduti$deceduti,pred_exp)
 icu_capacity = 5090*0.25 # source: https://www.agi.it/fact-checking/news/2020-03-06/coronavirus-posti-letto-ospedali-7343251/
-# gr = NULL
-# for (i in 1:(nrow(date)-1)) {
-#   gr[i] = (Totale_deceduti$deceduti[i+1] - Totale_deceduti$deceduti[i])/(Totale_deceduti$deceduti[i])
-# }
-# T_d = (70/gr) + 0.03
+tau = log(2)/coeff_exponential["a"] # doubling time
+gamma = exp(coeff_exponential[1]) # daily growth
+
+# log = "y", for log scale
 
 pdf('./plot/plot_logit_exp_Deaths_it.pdf',height=8, width=15)
 plot(Totale_deceduti$deceduti ~ Totale_deceduti$data, data = Totale_deceduti, type = "p", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Deaths in Italy", 

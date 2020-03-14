@@ -44,7 +44,7 @@ pred_logi = predict(logit)
 pred_exp = predict(exponential)
 rmse_logit = rmse(Totale_TI$terapia_intensiva,pred_logi)
 rmse_exp = rmse(Totale_TI$terapia_intensiva,pred_exp)
-icu_capacity = 5090*0.25 # source: https://www.agi.it/fact-checking/news/2020-03-06/coronavirus-posti-letto-ospedali-7343251/
+icu_capacity = 5090*0.35 # source: https://www.agi.it/fact-checking/news/2020-03-06/coronavirus-posti-letto-ospedali-7343251/
 
 pdf('./plot/plot_logit_exp_ICU_it.pdf',height=8, width=15)
 plot(Totale_TI$terapia_intensiva ~ Totale_TI$data, data = Totale_TI, type = "p", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 ICU patients in Italy", 

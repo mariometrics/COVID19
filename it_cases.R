@@ -49,7 +49,7 @@ gamma = exp(coeff_exponential[1]) # daily growth
 # log = "y", for log scale
 
 pdf('./plot/plot_logit_exp_Cases_it.pdf',height=8, width=15)
-plot(Casi$totale_casi ~ Casi$data, data = Casi, type = "p", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Deaths in Italy", 
+plot(Casi$totale_casi ~ Casi$data, data = Casi, type = "p", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Confirmed Cases in Italy", 
      xlab = "Day since 1 Jan", ylab = "COVID19 Deaths", xlim = c(min(Casi$data), (end_ep+20)), ylim = c(min(Casi$totale_casi), coeff_logit[1]*1.1))  # Census data
 curve(coeff_logit[1]/(1 + exp(-(x - coeff_logit[2])/coeff_logit[3])), add = T, col = "blue",lwd=2)  # Fitted model
 curve(coeff_exponential[1]*exp(coeff_exponential[2]*x), add = T, col = "orange", lwd= 2)
@@ -57,9 +57,9 @@ curve(coeff_exponential[1]*exp(coeff_exponential[2]*x), add = T, col = "orange",
 legend(min(Casi$data), coeff_logit[1], legend=c("Real data","Logistic Model", "Exponential Model"),
        col=c("red","blue", "orange"), lty=c(NA,1,1), pch= c(16,NA,NA), lwd = 2)
 points(end_ep, coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3])) , pch = "X", cex = 1.3)
-text(end_ep+10,20000,paste("RMSE Logit:",round(rmse_logit,digits = 2)))
-text(end_ep+10,18000,paste("RMSE Exponential:",round(rmse_exp,digits = 2)))
-text(end_ep+10,16000,paste("Approximated Flex Date (Logit, the abscissa of the X on blue line):",appr_flex_date))
-text(end_ep+10,14000,paste("Approximated Flex Peak (Logit, the ordinate of the X on blue line):",round(coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3])))))
+text(end_ep+5,20000,paste("RMSE Logit:",round(rmse_logit,digits = 2)))
+text(end_ep+5,18000,paste("RMSE Exponential:",round(rmse_exp,digits = 2)))
+text(end_ep+5,16000,paste("Approximated Flex Date (Logit, the abscissa of the X on blue line):",appr_flex_date))
+text(end_ep+5,14000,paste("Approximated Flex Peak (Logit, the ordinate of the X on blue line):",round(coeff_logit[1]/(1 + exp(-(end_ep - coeff_logit[2])/coeff_logit[3])))))
 text(end_ep+19,50,"Mario Marchetti")
 dev.off()

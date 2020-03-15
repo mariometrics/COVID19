@@ -14,6 +14,7 @@ library(plotly)
 library(tidyverse)
 library(nls2)
 library(mixtox)
+library(Metrics)
 
 ## Create a daily Date object - helps my work on dates
 # Load dataset from github
@@ -63,7 +64,7 @@ pos_LDit = which(date_it ==Italy_lockdown)
 rit_res_it = Italy_lockdown - Hubei_lockdown
 
 pdf('./plot/plot_logit_exp_Deaths_it_hu.pdf',height=8, width=15)
-  plot(Italy_deaths ~ date_it, type = "p", log = "y", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Deaths in Italy (Logarithmic scale)", 
+  plot(Italy_deaths ~ date_it, type = "p", log = "y", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Deaths in Italy and Hubei (Logarithmic scale)", 
      xlab = "Day since 1 Jan", ylab = "COVID19 Deaths (log)", xlim = c(min(date_it), (end_ep+20)), ylim = c(min(Italy_deaths), coeff_logit[1]*1.1))  # Census data
 curve(coeff_logit[1]/(1 + exp(-(x - coeff_logit[2])/coeff_logit[3])), add = T, col = "blue",lwd=2)  # Fitted model
 lines(Hubei_deaths ~ date_hubei, type = "p", lwd = 4, col = "green")

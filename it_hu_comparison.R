@@ -15,6 +15,12 @@ library(tidyverse)
 library(nls2)
 library(mixtox)
 library(Metrics)
+library(MLmetrics)
+library(latex2exp)
+library(xml2)
+library(rvest)
+library(tikzDevice)
+
 
 ## Create a daily Date object - helps my work on dates
 # Load dataset from github
@@ -57,11 +63,17 @@ st = list(a = 0.002)
 
 pred_logi = predict(logit)
 rmse_logit = rmse(Italy_deaths,pred_logi)
+r2_logit = round(R2_Score(pred_logi,Italy_deaths), digits = 6)
 Hubei_lockdown = as.POSIXlt("2020-01-23",format = FMT)$yday + pos_it-1
 pos_LD = which(date_hubei == Hubei_lockdown)
 Italy_lockdown = as.POSIXlt("2020-03-09",format = FMT)$yday
 pos_LDit = which(date_it ==Italy_lockdown)
 rit_res_it = Italy_lockdown - Hubei_lockdown
+
+
+pg =TeX("\\href{http://utenti.dises.univpm.it/palomba/Mat/Rsquared.pdf}{G. Palomba (2013)}")
+
+
 
 pdf('./plot/plot_logit_exp_Deaths_it_hu.pdf',height=8, width=15)
   plot(Italy_deaths ~ date_it, type = "p", log = "y", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Deaths in Italy and Hubei (Logarithmic scale)", 
@@ -80,6 +92,8 @@ points(Italy_lockdown,Italy_deaths[pos_LDit], pch = "X", cex = 2.5, col = "purpl
 text(Hubei_lockdown+6,3000, "1 week from Hubei Lockdown")
 text(Hubei_lockdown+6,2500, "First positive signal")
 text(Italy_lockdown, 2000, "Italy Lockdown")
+text(90,700,TeX(sprintf("$R^2_{Logit}: %g^* $", r2_logit)))
 text(90,500,paste("days of delay in the Italian lockdown: ",rit_res_it))
 text(end_ep+15,30,"Mario Marchetti")
+text(end_ep+10,20,"*be careful to take this index seriously in nonlinear correlations!\n Source: http://utenti.dises.univpm.it/palomba/Mat/Rsquared.pdf" )
 dev.off()

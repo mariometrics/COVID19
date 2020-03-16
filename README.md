@@ -1,7 +1,7 @@
 # COVID19 IN ITALY: MODELS AND PREDICTION 
 ### Logistic and Exponential Models: A comparison
 
-Article in italian available [here])(https://www.linkedin.com/pulse/dati-e-covid19-alcune-considerazioni-mario-marchhere/) (March 11, 2020).
+Article in italian available [here](https://www.linkedin.com/pulse/dati-e-covid19-alcune-considerazioni-mario-marchhere/) (March 11, 2020).
 
 Taking a cue from an article of Toward Science (available [here](https://towardsdatascience.com/covid-19-infection-in-italy-mathematical-models-and-predictions-7784b4d7dd8d)), I tried to replicate the analysis with the R software, and to extend it to the data of ICU patients, to the total number of hospitalized patients and to the deaths.
 

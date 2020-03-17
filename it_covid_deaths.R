@@ -33,7 +33,7 @@ pos = length(newdate) - length(predicted[round(predicted) == round(coeff_logit[1
 end_ep = newdate[pos]
 
 # Exponential estimate
-exponential = nls(I(Totale_deceduti$deceduti ~ a * exp(b * Totale_deceduti$data)), data = Totale_deceduti, start = start)
+exponential = nls(I(Totale_deceduti$deceduti ~ a * exp(b * Totale_deceduti$data)), data = Totale_deceduti, start = start, control = nls.control(maxiter = 500))
 coeff_exponential = coef(exponential)
 appr_flex_date = seq(as.Date("2020-01-01"), by=1, len=end_ep)
 appr_flex_date = appr_flex_date[length(appr_flex_date)]

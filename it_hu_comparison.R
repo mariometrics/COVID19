@@ -51,7 +51,9 @@ date_hubei = date + pos_it -1
 
 # Logit estimate
 logit =  nls(Italy_deaths  ~ SSlogis(date_it, c, b, a))
+gomp = nls(Italy_deaths ~ SSgompertz(date_it, c, b, a))
 coeff_logit = coef(logit)
+coeff_gomp = coef(gomp)
 
 lastday = date[length(date)]
 h = 100
@@ -77,9 +79,10 @@ pdf('./plot/plot_logit_exp_Deaths_it_hu.pdf',height=8, width=15)
 plot(Italy_deaths ~ date_it, type = "p", log = "y", lwd = 4 , col = "red", main = "Logistic & Exponential Growth Model of COVID19 Deaths in Italy and Hubei (Logarithmic scale)", 
      xlab = "Day since 1 Jan", ylab = "COVID19 Deaths (log)", xlim = c(min(date_it), (end_ep+20)), ylim = c(min(Italy_deaths), coeff_logit[1]*1.1))  # Census data
 curve(coeff_logit[1]/(1 + exp(-(x - coeff_logit[2])/coeff_logit[3])), add = T, col = "blue",lwd=2)  # Fitted model
+curve(coeff_gomp[1]*exp(-coeff_gomp[2]*coeff_gomp[3]^x), add = T, col = "orange",lwd=2)
 lines(Hubei_deaths ~ date_hubei, type = "p", lwd = 4, col = "green")
-legend(end_ep+10, 100, legend=c("Real data Italy","Real data Hubei", "Logistic Model"),
-       col=c("red","green", "blue"), lty=c(NA,NA,1), pch= c(16,16,NA), lwd = 2)
+legend(end_ep+10, 100, legend=c("Real data Italy","Real data Hubei", "Logistic Model","Gompertz Model"),
+       col=c("red","green", "blue","orange"), lty=c(NA,NA,1,1), pch= c(16,16,NA,NA), lwd = 2)
 abline(v = Hubei_lockdown, col = "black")
 abline(v = Hubei_lockdown+6, col = "black")
 abline(v = Italy_lockdown, col = "black")

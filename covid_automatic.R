@@ -7,6 +7,7 @@ library(Metrics)
 library(MLmetrics)
 library(easynls)
 library(growthmodels)
+library(minpack.lm)
 
 #############################################################################################
 ##################### LOAD DATA 
@@ -45,36 +46,40 @@ nomi_regioni = NULL
 ritardo = NULL
 count = NULL
 appr_flex_date = NULL
+cont = nls.control(minFactor = 1e-10)
+vector = 1:19
+vector[11:19] = 12:20
 
 ## Start calculation
-for (i in 1:N_regioni) {
+for (i in 1:20) {
   ### Name region
   nomi_regioni[i] = as.character(df$denominazione_regione[df$codice_regione==i][1])
   
   ### Extract region
   Regioni[[i]] = df[df$codice_regione==i,ser]
-  Regioni[[i]] = Regioni[[i]][Regioni[[i]]$deceduti>4,]
+  Regioni[[i]] = Regioni[[i]][Regioni[[i]]$deceduti>0,]
   ritardo[i] = nrow(df[df$codice_regione==3,]) - nrow(Regioni[[i]])
   Regioni[[i]]$data = Regioni[[i]]$data - ritardo[i]
 
   ### Fit Logistic & Gompertz
   if (nrow(Regioni[[i]]) > 10) {
     count[i] = i
+    print(i)
     gomp[[i]] = nls(Regioni[[i]]$deceduti ~ SSgompertz(Regioni[[i]]$data, a, b, c), data = Regioni[[i]])
     logit[[i]] = nls(Regioni[[i]]$deceduti ~ SSlogis(Regioni[[i]]$data, a, b, c), data = Regioni[[i]])
-    
     print(i)
-    ### RMSE & goodness of fit 
+
+    ### RMSE & goodness of fit
     pred_logi[[i]] = predict(logit[[i]])
     pred_gomp[[i]] = predict(gomp[[i]])
     rmse_logit[i] = rmse(Regioni[[i]]$deceduti,pred_logi[[i]])
     rmse_gomp[i] = rmse(Regioni[[i]]$deceduti,pred_gomp[[i]])
     r2_logit[i] = R2_Score(pred_logi[[i]],Regioni[[i]]$deceduti)
     r2_gomp[i] = R2_Score(pred_gomp[[i]],Regioni[[i]]$deceduti)
-    
+
     ### Choose between Logistic and Gompertz & find the asymptotic value i.e. the peak
     lastday = Regioni[[i]]$data[nrow(Regioni[[i]])]
-    h = 100 # good for all 
+    h = 100 # good for all
     newdate = (lastday+1):(lastday+h+1)
 
     if (rmse_logit[i] < rmse_gomp[i] & r2_logit[i] > r2_gomp[i] ) {

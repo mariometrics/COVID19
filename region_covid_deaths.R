@@ -383,7 +383,7 @@ lmt = max(c(coeff_Lombardia[1],coeff_Marche[1],coeff_ER[1]))
 ### Plot
 pdf('./plot/plot_gomp_log_Marche_Lombardia.pdf',height=8, width=15)
 plot(Lombardia, lwd = 4, log = "y", xlim = c(min(Lombardia$data), end_ep+10), ylim = c(min(Marche$deceduti),lmt),
-     main = "Logistic & Gompertz growth for Deaths in Italina Regions (Logarithmic scale)",
+     main = "Logistic & Gompertz growth for Deaths in Italian Regions (Logarithmic scale)",
      sub = "The algorithm automatically interpolates the data of the regions with the Gompertz and Logistic functions and plots the best fitting by evaluating RMSE and R square(carefully!)",
      xlab = "Days since 1st Jan",
      ylab = "Deaths")

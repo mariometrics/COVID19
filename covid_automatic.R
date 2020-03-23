@@ -9,6 +9,7 @@ library(easynls)
 library(growthmodels)
 library(minpack.lm)
 library(randomcoloR)
+library(dplyr)
 
 #############################################################################################
 ##################### LOAD DATA 

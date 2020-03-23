@@ -24,6 +24,14 @@ df$data = as.POSIXlt(df$data,format = FMT)$yday
 ser = c("data","deceduti")
 N_regioni = 20
 
+### Bolzano and Trento same codice regione but different denominazione 
+for (w in as.POSIXlt(date,format = "%Y-%m-%d")$yday) {
+  for (h in 5:length(df)) {
+    df[df$codice_regione == 4 & df$data == w,h] = sum(df[df$codice_regione == 4 & df$data == w,h])*c(1,NA)
+  }
+}
+df = na.omit(df)
+
 ### pre-allocation
 Regioni = NULL
 gomp = NULL
@@ -54,23 +62,25 @@ legend_curve = NULL
 lmt = NULL
 color = NULL
 DT_text = NULL
+saturation_text = NULL
 cont = nls.control(minFactor = 1e-10)
 
 ## Start calculation
 for (i in 1:20) {
   ### Name region
   nomi_regioni[i] = as.character(df$denominazione_regione[df$codice_regione==i][1])
+  nomi_regioni[4] = "Trentino A.A."
   
   ### Extract region
   Regioni[[i]] = df[df$codice_regione==i,ser]
-  Regioni[[i]] = Regioni[[i]][Regioni[[i]]$deceduti>6,]
+  Regioni[[i]] = Regioni[[i]][Regioni[[i]]$deceduti>5,]
   ritardo[i] = nrow(df[df$codice_regione==3,]) - nrow(Regioni[[i]])
   Regioni[[i]]$data = Regioni[[i]]$data - ritardo[i]
   
   ### Last percentage growth 
   if (nrow(Regioni[[i]]) >= 2) {
     gr_today[i] = (Regioni[[i]]$deceduti[nrow(Regioni[[i]])] - Regioni[[i]]$deceduti[nrow(Regioni[[i]])-1])/(Regioni[[i]]$deceduti[nrow(Regioni[[i]])-1])*100
-    gr_today_text[i] = sprintf(" %s: +%g%%\n ", nomi_regioni[i], round(gr_today[i], digits = 2))
+    gr_today_text[i] = sprintf("%s: +%g%%\n", nomi_regioni[i], round(gr_today[i], digits = 2))
   }
   
   ### Fit Logistic & Gompertz
@@ -105,7 +115,12 @@ for (i in 1:20) {
     }
     
     pos[i] = length(newdate) - length(predicted[[i]][round(predicted[[i]]) > round(coeff[[i]][1], digits = 0)-2])
-    end_ep[i] = newdate[pos[i]]
+    if (pos[i] >=1) {
+      end_ep[i] = newdate[pos[i]]  
+    }else{
+      end_ep[i] = newdate[1]
+    }
+    
     
     ### Calculate doubling time
     gr[[i]] = diff(Regioni[[i]]$deceduti)/Regioni[[i]]$deceduti[1:nrow(Regioni[[i]])-1]
@@ -122,6 +137,20 @@ for (i in 1:20) {
     legend_curve[i] = sprintf("%s",cn[i])
     lmt[i] = coeff[[i]][1]
     DT_text[i] = sprintf("Doubling Time (T) %s: %g\n",nomi_regioni[i],round(dt_today[i],digits = 2))
+    saturation_text[i] = sprintf("%s: %g \n",nomi_regioni[i],round(coeff[[i]][1], digits = -2))
+  }
+}
+
+## It is usefull to have Agggregated time series for Italy
+aggr_it = NULL
+gr_italy = NULL
+gr_italy_text = NULL
+
+for (t in as.POSIXlt(date,format = "%Y-%m-%d")$yday) {
+  aggr_it[t-min(df$data)] = sum(df$deceduti[df$data == t]) 
+  if (length(aggr_it) >= 2) {
+    gr_italy = diff(aggr_it)/aggr_it[1:(length(aggr_it)-1)]*100
+    gr_italy_text[t-min(df$data)] = sprintf("[%s] +%g%% \n", date[t-min(df$data)+1], round(gr_italy[t-min(df$data)-1], digits = 2))
   }
 }
 
@@ -144,8 +173,12 @@ lty[1:length(count)] = NA
 pch = rep(16,len_leg)
 pch[length(count)+1:len_leg] = NA
 DT_text = DT_text[!is.na(DT_text)]
+gr_today = gr_today[!is.na(gr_today)]
+gr_today_text = gr_today_text[!is.na(gr_today_text)]
 gr_today_idx = sort(gr_today,decreasing = TRUE, index.return = TRUE)$ix[1:5]
 top5gr = gr_today_text[gr_today_idx]
+last5gr_it = gr_italy_text[length(gr_italy_text):(length(gr_italy_text)-5)]
+saturation_text = saturation_text[!is.na(saturation_text)]
 
 ### Outer bounds out of cycle
 end_ep = max(end_ep[!is.na(end_ep)])
@@ -164,7 +197,7 @@ plot(Regioni[[3]], lwd = 4, log = "y",
      xlab = "Days since 1st Jan",
      ylab = "Deaths")
 
-legend(end_ep/2+2,max(Regioni[[3]]$deceduti),
+legend(end_ep/2+2,max(Regioni[[3]]$deceduti)*2.5,
        legend = legend,
        col = color_, 
        lty = lty, 
@@ -189,9 +222,16 @@ for (j in count) {
 }
 
 ## Show useful information on the figure
-text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.2), paste(DT_text, collapse = ""), col = 1, lwd = 2, pos = 4)
-text(end_ep/2+2.2,max(Regioni[[3]]$deceduti)/exp(4.8), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
-text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(5.9), paste(top5gr, collapse = ""), col = 1, lwd = 2, pos = 4)
+text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4), paste(DT_text, collapse = ""), col = 1, lwd = 2, pos = 4)
+
+text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.8), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
+text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(6), paste(top5gr, collapse = ""), col = 1, lwd = 2, pos = 4)
+
+text(min(df$data),max(Regioni[[3]]$deceduti/0.8), "Last 5 days Perc. growth all over Italy",col = 1, lwd = 2, pos = 4)
+text(min(df$data),max(Regioni[[3]]$deceduti/3), paste(last5gr_it, collapse = ""),col = 1, lwd = 2, pos = 4)
+
+text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(4.5), paste("Saturation Deaths (not a reliable forecast) ", date[length(date)]), col = 1, pos = 4)
+text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(6), paste(saturation_text, collapse = ""),col = 1, pos = 4)
 
 text(end_ep/2.1,10,"Mario Marchetti", cex = 1.5)
 par(mar=c(5, 4, 4, 2))

@@ -8,6 +8,7 @@ library(MLmetrics)
 library(easynls)
 library(growthmodels)
 library(minpack.lm)
+library(randomcoloR)
 
 #############################################################################################
 ##################### LOAD DATA 
@@ -42,13 +43,18 @@ gr = NULL
 gr_mean = NULL
 dt = NULL
 dt_today = NULL
+gr_today = NULL
+gr_today_text = NULL
 nomi_regioni = NULL
 ritardo = NULL
 count = NULL
 appr_flex_date = NULL
+legend_data = NULL
+legend_curve = NULL
+lmt = NULL
+color = NULL
+DT_text = NULL
 cont = nls.control(minFactor = 1e-10)
-vector = 1:19
-vector[11:19] = 12:20
 
 ## Start calculation
 for (i in 1:20) {
@@ -57,18 +63,24 @@ for (i in 1:20) {
   
   ### Extract region
   Regioni[[i]] = df[df$codice_regione==i,ser]
-  Regioni[[i]] = Regioni[[i]][Regioni[[i]]$deceduti>0,]
+  Regioni[[i]] = Regioni[[i]][Regioni[[i]]$deceduti>6,]
   ritardo[i] = nrow(df[df$codice_regione==3,]) - nrow(Regioni[[i]])
   Regioni[[i]]$data = Regioni[[i]]$data - ritardo[i]
-
+  
+  ### Last percentage growth 
+  if (nrow(Regioni[[i]]) >= 2) {
+    gr_today[i] = (Regioni[[i]]$deceduti[nrow(Regioni[[i]])] - Regioni[[i]]$deceduti[nrow(Regioni[[i]])-1])/(Regioni[[i]]$deceduti[nrow(Regioni[[i]])-1])*100
+    gr_today_text[i] = sprintf(" %s: +%g%%\n ", nomi_regioni[i], round(gr_today[i], digits = 2))
+  }
+  
   ### Fit Logistic & Gompertz
-  if (nrow(Regioni[[i]]) > 10) {
+  if (nrow(Regioni[[i]]) >= 13) {
     count[i] = i
     print(i)
     gomp[[i]] = nls(Regioni[[i]]$deceduti ~ SSgompertz(Regioni[[i]]$data, a, b, c), data = Regioni[[i]])
     logit[[i]] = nls(Regioni[[i]]$deceduti ~ SSlogis(Regioni[[i]]$data, a, b, c), data = Regioni[[i]])
     print(i)
-
+    
     ### RMSE & goodness of fit
     pred_logi[[i]] = predict(logit[[i]])
     pred_gomp[[i]] = predict(gomp[[i]])
@@ -76,12 +88,12 @@ for (i in 1:20) {
     rmse_gomp[i] = rmse(Regioni[[i]]$deceduti,pred_gomp[[i]])
     r2_logit[i] = R2_Score(pred_logi[[i]],Regioni[[i]]$deceduti)
     r2_gomp[i] = R2_Score(pred_gomp[[i]],Regioni[[i]]$deceduti)
-
+    
     ### Choose between Logistic and Gompertz & find the asymptotic value i.e. the peak
     lastday = Regioni[[i]]$data[nrow(Regioni[[i]])]
     h = 100 # good for all
     newdate = (lastday+1):(lastday+h+1)
-
+    
     if (rmse_logit[i] < rmse_gomp[i] & r2_logit[i] > r2_gomp[i] ) {
       coeff[[i]] = coef(logit[[i]])
       predicted[[i]] = coeff[[i]][1]/(1 + exp(-(newdate-coeff[[i]][2]))/coeff[[i]][3])
@@ -89,21 +101,98 @@ for (i in 1:20) {
     } else{
       coeff[[i]] = coef(gomp[[i]])
       predicted[[i]] = coeff[[i]][1]*exp(-coeff[[i]][2]*coeff[[i]][3]^(newdate))
-      cn[i] = as.character(sprintf("Logistic %s", nomi_regioni[i]))
+      cn[i] = as.character(sprintf("Gompertz %s", nomi_regioni[i]))
     }
-
+    
     pos[i] = length(newdate) - length(predicted[[i]][round(predicted[[i]]) > round(coeff[[i]][1], digits = 0)-2])
     end_ep[i] = newdate[pos[i]]
-
+    
     ### Calculate doubling time
     gr[[i]] = diff(Regioni[[i]]$deceduti)/Regioni[[i]]$deceduti[1:nrow(Regioni[[i]])-1]
     gr_mean[i] = mean(gr[[i]])
     dt[i] = log(2,exp(1))/gr_mean[i]
     dt_today[i] = (Regioni[[i]]$data[nrow(Regioni[[i]])] - Regioni[[i]]$data[nrow(Regioni[[i]])-1])*log(2)/(log(Regioni[[i]]$deceduti[nrow(Regioni[[i]])]/Regioni[[i]]$deceduti[nrow(Regioni[[i]])-1]))
-
+    
     ### Approximated flex date
     appr_flex_date[[i]] = seq(as.Date("2020-01-01"), by=1, len=(end_ep[i]+ritardo[i]))
     appr_flex_date[[i]] = appr_flex_date[[i]][length(appr_flex_date[[i]])]
-
+    
+    ## Stuff for plot
+    legend_data[i] = sprintf("Real Data %s (%g days before)",nomi_regioni[i],ritardo[i])
+    legend_curve[i] = sprintf("%s",cn[i])
+    lmt[i] = coeff[[i]][1]
+    DT_text[i] = sprintf("Doubling Time (T) %s: %g\n",nomi_regioni[i],round(dt_today[i],digits = 2))
   }
 }
+
+#############################################################################################
+##################### PLOTTING RESULTS
+############################################################################################
+
+## What plot?
+count = count[!is.na(count)]
+
+## To compute legend automatically
+legend = c(legend_data[!is.na(legend_data)],legend_curve[!is.na(legend_curve)])
+len_leg = length(legend)
+color[count] = 1:length(count) 
+# color = c(count,count)
+# color[count] = randomColor(length(count)) # nice function
+color_ = c(color[!is.na(color)],color[!is.na(color)])
+lty = rep(1,len_leg)
+lty[1:length(count)] = NA
+pch = rep(16,len_leg)
+pch[length(count)+1:len_leg] = NA
+DT_text = DT_text[!is.na(DT_text)]
+gr_today_idx = sort(gr_today,decreasing = TRUE, index.return = TRUE)$ix[1:5]
+top5gr = gr_today_text[gr_today_idx]
+
+### Outer bounds out of cycle
+end_ep = max(end_ep[!is.na(end_ep)])
+lmt_ = max(lmt[!is.na(lmt)])
+
+### Plot
+pdf('./plot/plot_gomp_log_Region_auto.pdf',height=8, width=16)
+
+par(xpd = T, mar = par()$mar + c(1,1,1,18))
+
+plot(Regioni[[3]], lwd = 4, log = "y",
+     xlim = c(min(Regioni[[3]]$data), end_ep/2),
+     ylim = c(min(Regioni[[11]]$deceduti),max(Regioni[[3]]$deceduti)+mean(Regioni[[3]]$deceduti)),
+     main = "Logistic & Gompertz growth for Deaths in Italian Regions (Logarithmic scale)",
+     sub = "The algorithm automatically interpolates the data of the regions with the Gompertz and Logistic functions and plots the best fitting by evaluating RMSE and R square(carefully!)",
+     xlab = "Days since 1st Jan",
+     ylab = "Deaths")
+
+legend(end_ep/2+2,max(Regioni[[3]]$deceduti),
+       legend = legend,
+       col = color_, 
+       lty = lty, 
+       pch= pch, 
+       lwd = 2,
+       cex = 1,
+       xpd = TRUE,
+       horiz = FALSE,
+       bty = "n")
+
+for (j in count) {
+  
+  ## Plot Real Data 
+  lines(Regioni[[j]],type = "p",col = color[j], lwd = 4)
+  
+  ### Fit Curves
+  if (rmse_logit[j] < rmse_gomp[j] & r2_logit[j] > r2_gomp[j] ) {
+    curve(coeff[[j]][1]/(1 + exp(-(x-coeff[[j]][2])/coeff[[j]][3])), add = T, col = color[j], lwd = 3, xpd = FALSE)
+  } else{
+    curve(coeff[[j]][1]*exp(-coeff[[j]][2]*coeff[[j]][3]^x), add = T, col = color[j],lwd=3, xpd = FALSE)
+  }
+}
+
+## Show useful information on the figure
+text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.2), paste(DT_text, collapse = ""), col = 1, lwd = 2, pos = 4)
+text(end_ep/2+2.2,max(Regioni[[3]]$deceduti)/exp(4.8), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
+text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(5.9), paste(top5gr, collapse = ""), col = 1, lwd = 2, pos = 4)
+
+text(end_ep/2.1,10,"Mario Marchetti", cex = 1.5)
+par(mar=c(5, 4, 4, 2))
+dev.off()

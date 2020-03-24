@@ -198,7 +198,7 @@ plot(Regioni[[3]], lwd = 4, log = "y",
      xlab = "Days since 1st Jan",
      ylab = "Deaths")
 
-legend(end_ep/2+2,max(Regioni[[3]]$deceduti)*2.5,
+legend(end_ep/2+2,max(Regioni[[3]]$deceduti)*5,
        legend = legend,
        col = color_, 
        lty = lty, 
@@ -223,17 +223,19 @@ for (j in count) {
 }
 
 ## Show useful information on the figure
-text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4), paste(DT_text, collapse = ""), col = 1, lwd = 2, pos = 4)
+text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.15), paste(DT_text, collapse = ""), col = 1, lwd = 2, pos = 4)
 
-text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.8), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
+text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.9), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
 text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(6), paste(top5gr, collapse = ""), col = 1, lwd = 2, pos = 4)
 
 text(min(df$data),max(Regioni[[3]]$deceduti/0.8), "Last 5 days Perc. growth all over Italy",col = 1, lwd = 2, pos = 4)
 text(min(df$data),max(Regioni[[3]]$deceduti/3), paste(last5gr_it, collapse = ""),col = 1, lwd = 2, pos = 4)
 
-text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(4.5), paste("Saturation Deaths (not a reliable forecast) ", date[length(date)]), col = 1, pos = 4)
+text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(4.4), paste("Saturation Deaths (not a reliable forecast) ", date[length(date)]), col = 1, pos = 4)
 text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(6), paste(saturation_text, collapse = ""),col = 1, pos = 4)
 
 text(end_ep/2.1,10,"Mario Marchetti", cex = 1.5)
 par(mar=c(5, 4, 4, 2))
 dev.off()
+
+print(date[length(date)]) # to control updates

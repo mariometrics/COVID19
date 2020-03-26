@@ -16,7 +16,7 @@ library(dplyr)
 ############################################################################################
 url = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv"
 df = read.csv(url, header = TRUE)
-FMT = '%Y-%m-%d %H:%M:%S'
+FMT = '%Y-%m-%dT%H:%M:%S'
 date = levels(df$data)
 date = seq(as.Date("2020-02-24"), by=1, len=length(date))
 df$data = as.POSIXlt(df$data,format = FMT)$yday
@@ -27,7 +27,7 @@ N_regioni = 20
 
 ### Bolzano and Trento same codice regione but different denominazione 
 for (w in as.POSIXlt(date,format = "%Y-%m-%d")$yday) {
-  for (h in 5:length(df)) {
+  for (h in 5:(length(df)-2)) {
     df[df$codice_regione == 4 & df$data == w,h] = sum(df[df$codice_regione == 4 & df$data == w,h])*c(1,NA)
   }
 }

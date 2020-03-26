@@ -1,5 +1,5 @@
 rm(list=ls())
-
+  
 library(tidyverse)
 library(nls2)
 library(mixtox)
@@ -85,7 +85,7 @@ for (i in 1:20) {
   }
   
   ### Fit Logistic & Gompertz
-  if (nrow(Regioni[[i]]) >= 13) {
+  if (nrow(Regioni[[i]]) >= 15) {
     count[i] = i
     print(i)
     gomp[[i]] = nls(Regioni[[i]]$deceduti ~ SSgompertz(Regioni[[i]]$data, a, b, c), data = Regioni[[i]])
@@ -178,7 +178,7 @@ gr_today = gr_today[!is.na(gr_today)]
 gr_today_text = gr_today_text[!is.na(gr_today_text)]
 gr_today_idx = sort(gr_today,decreasing = TRUE, index.return = TRUE)$ix[1:5]
 top5gr = gr_today_text[gr_today_idx]
-last5gr_it = gr_italy_text[length(gr_italy_text):(length(gr_italy_text)-5)]
+last5gr_it = gr_italy_text[length(gr_italy_text):(length(gr_italy_text)-10)]
 saturation_text = saturation_text[!is.na(saturation_text)]
 
 ### Outer bounds out of cycle
@@ -228,8 +228,8 @@ text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.15), paste(DT_text, collapse = 
 text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.9), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
 text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(6), paste(top5gr, collapse = ""), col = 1, lwd = 2, pos = 4)
 
-text(min(df$data),max(Regioni[[3]]$deceduti/0.8), "Last 5 days Perc. growth all over Italy",col = 1, lwd = 2, pos = 4)
-text(min(df$data),max(Regioni[[3]]$deceduti/3), paste(last5gr_it, collapse = ""),col = 1, lwd = 2, pos = 4)
+text(min(df$data),max(Regioni[[3]]$deceduti/0.8), "Last 10 days Perc. growth all over Italy",col = 1, lwd = 2, pos = 4)
+text(min(df$data),max(Regioni[[3]]$deceduti/7), paste(last5gr_it, collapse = ""),col = 1, lwd = 2, pos = 4)
 
 text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(4.4), paste("Saturation Deaths (not a reliable forecast) ", date[length(date)]), col = 1, pos = 4)
 text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(6), paste(saturation_text, collapse = ""),col = 1, pos = 4)

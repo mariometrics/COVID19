@@ -85,7 +85,7 @@ for (i in 1:20) {
   }
   
   ### Fit Logistic & Gompertz
-  if (nrow(Regioni[[i]]) > 16) {
+  if (nrow(Regioni[[i]]) > 20) {
     count[i] = i
     print(i)
     gomp[[i]] = nls(Regioni[[i]]$deceduti ~ SSgompertz(Regioni[[i]]$data, a, b, c), data = Regioni[[i]])

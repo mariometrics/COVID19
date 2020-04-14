@@ -85,7 +85,7 @@ for (i in 1:20) {
   }
   
   ### Fit Logistic & Gompertz
-  if (nrow(Regioni[[i]]) > 20) {
+  if (nrow(Regioni[[i]]) > 25) {
     count[i] = i
     print(i)
     gomp[[i]] = nls(Regioni[[i]]$deceduti ~ SSgompertz(Regioni[[i]]$data, a, b, c), data = Regioni[[i]])
@@ -191,14 +191,14 @@ pdf('./plot/plot_gomp_log_Region_auto.pdf',height=8, width=16)
 par(xpd = T, mar = par()$mar + c(1,1,1,18))
 
 plot(Regioni[[3]], lwd = 4, log = "y",
-     xlim = c(min(Regioni[[3]]$data), end_ep/2),
+     xlim = c(min(Regioni[[3]]$data), end_ep/1.8),
      ylim = c(min(Regioni[[11]]$deceduti),max(Regioni[[3]]$deceduti)+mean(Regioni[[3]]$deceduti)),
      main = "Logistic & Gompertz growth for Deaths in Italian Regions (Logarithmic scale)",
      sub = "The algorithm automatically interpolates the data of the regions with the Gompertz and Logistic functions and plots the best fitting by evaluating RMSE and R square(carefully!)",
      xlab = "Days since 1st Jan",
      ylab = "Deaths")
 
-legend(end_ep/2+2,max(Regioni[[3]]$deceduti)*5,
+legend(end_ep/1.8+2,max(Regioni[[3]]$deceduti)*5,
        legend = legend,
        col = color_, 
        lty = lty, 
@@ -223,18 +223,18 @@ for (j in count) {
 }
 
 ## Show useful information on the figure
-text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.4), paste(DT_text, collapse = ""), col = 1, lwd = 2, pos = 4)
+#text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(4.4), paste(DT_text, collapse = ""), col = 1, lwd = 2, pos = 4)
 
-text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(5.2), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
-text(end_ep/2+2,max(Regioni[[3]]$deceduti)/exp(6.4), paste(top5gr, collapse = ""), col = 1, lwd = 2, pos = 4)
+text(end_ep/1.8+2,max(Regioni[[3]]$deceduti)/exp(5.7), paste("Top 5 Perc. Growth ", date[length(date)]), col = 1, lwd = 2, pos = 4)
+text(end_ep/1.8+2,max(Regioni[[3]]$deceduti)/exp(6.9), paste(top5gr, collapse = ""), col = 1, lwd = 2, pos = 4)
 
 text(min(df$data),max(Regioni[[3]]$deceduti/0.8), "Last 10 days Perc. growth all over Italy",col = 1, lwd = 2, pos = 4)
-text(min(df$data),max(Regioni[[3]]$deceduti/7.1), paste(last5gr_it, collapse = ""),col = 1, lwd = 2, pos = 4)
+text(min(df$data),max(Regioni[[3]]$deceduti/7.7), paste(last5gr_it, collapse = ""),col = 1, lwd = 2, pos = 4)
 
-text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(4.4), paste("Saturation Deaths (not a reliable forecast) ", date[length(date)]), col = 1, pos = 4)
-text(max(df$data)-8,max(Regioni[[3]]$deceduti)/exp(6.2), paste(saturation_text, collapse = ""),col = 1, pos = 4)
+text(max(df$data)-12,max(Regioni[[3]]$deceduti)/exp(4.2), paste("Saturation Deaths (not a reliable forecast) ", date[length(date)]), col = 1, pos = 4, cex = 0.9)
+text(max(df$data)-12,max(Regioni[[3]]$deceduti)/exp(6.2), paste(saturation_text, collapse = ""),col = 1, pos = 4, cex = 0.8)
 
-text(end_ep/2.1,10,"Mario Marchetti", cex = 1.5)
+text(end_ep/1.9,10,"Mario Marchetti", cex = 1.5)
 par(mar=c(5, 4, 4, 2))
 dev.off()
 

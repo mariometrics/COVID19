@@ -100,7 +100,7 @@ max_var_Milano = "Comune con il maggiore incremento di decessi tra '19 e '20: {}
 
 PU  = PU.groupby('GE').aggregate({'TOTALE_15':np.sum, 'TOTALE_16':np.sum, 'TOTALE_17':np.sum, 'TOTALE_18':np.sum, 'TOTALE_19':np.sum, 'TOTALE_20':np.sum})
 PU = PU.reset_index().drop('GE',axis=1)
-PU['Day'] = list(pd.date_range('2020-01-01', periods=81, freq='D').to_series().dt.strftime('%m-%d'))
+PU['Day'] = list(pd.date_range('2020-01-01', periods=PU.shape[0], freq='D').to_series().dt.strftime('%m-%d'))
 PU = PU.set_index(['Day'])
 PU.columns = ['2015','2016','2017','2018','2019','2020']
 
@@ -164,7 +164,7 @@ plt.savefig('./../plot/covid_PU.png')
 
 Bergamo  = Bergamo.groupby('GE').aggregate({'TOTALE_15':np.sum, 'TOTALE_16':np.sum, 'TOTALE_17':np.sum, 'TOTALE_18':np.sum, 'TOTALE_19':np.sum, 'TOTALE_20':np.sum})
 Bergamo = Bergamo.reset_index().drop('GE',axis=1)
-Bergamo['Day'] = list(pd.date_range('2020-01-01', periods=81, freq='D').to_series().dt.strftime('%m-%d'))
+Bergamo['Day'] = list(pd.date_range('2020-01-01', periods=PU.shape[0], freq='D').to_series().dt.strftime('%m-%d'))
 Bergamo = Bergamo.set_index(['Day'])
 Bergamo.columns = ['2015','2016','2017','2018','2019','2020']
 
@@ -227,7 +227,7 @@ plt.savefig('./../plot/covid_Bergamo.png')
 
 Piacenza  = Piacenza.groupby('GE').aggregate({'TOTALE_15':np.sum, 'TOTALE_16':np.sum, 'TOTALE_17':np.sum, 'TOTALE_18':np.sum, 'TOTALE_19':np.sum, 'TOTALE_20':np.sum})
 Piacenza = Piacenza.reset_index().drop('GE',axis=1)
-Piacenza['Day'] = list(pd.date_range('2020-01-01', periods=81, freq='D').to_series().dt.strftime('%m-%d'))
+Piacenza['Day'] = list(pd.date_range('2020-01-01', periods=PU.shape[0], freq='D').to_series().dt.strftime('%m-%d'))
 Piacenza = Piacenza.set_index(['Day'])
 Piacenza.columns = ['2015','2016','2017','2018','2019','2020']
 
@@ -289,7 +289,7 @@ plt.savefig('./../plot/covid_Piacenza.png')
 
 Milano  = Milano.groupby('GE').aggregate({'TOTALE_15':np.sum, 'TOTALE_16':np.sum, 'TOTALE_17':np.sum, 'TOTALE_18':np.sum, 'TOTALE_19':np.sum, 'TOTALE_20':np.sum})
 Milano = Milano.reset_index().drop('GE',axis=1)
-Milano['Day'] = list(pd.date_range('2020-01-01', periods=81, freq='D').to_series().dt.strftime('%m-%d'))
+Milano['Day'] = list(pd.date_range('2020-01-01', periods=PU.shape[0], freq='D').to_series().dt.strftime('%m-%d'))
 Milano = Milano.set_index(['Day'])
 Milano.columns = ['2015','2016','2017','2018','2019','2020']
 
@@ -352,7 +352,7 @@ plt.savefig('./../plot/covid_Milano.png')
 
 Lodi  = Lodi.groupby('GE').aggregate({'TOTALE_15':np.sum, 'TOTALE_16':np.sum, 'TOTALE_17':np.sum, 'TOTALE_18':np.sum, 'TOTALE_19':np.sum, 'TOTALE_20':np.sum})
 Lodi = Lodi.reset_index().drop('GE',axis=1)
-Lodi['Day'] = list(pd.date_range('2020-01-01', periods=81, freq='D').to_series().dt.strftime('%m-%d'))
+Lodi['Day'] = list(pd.date_range('2020-01-01', periods=PU.shape[0], freq='D').to_series().dt.strftime('%m-%d'))
 Lodi = Lodi.set_index(['Day'])
 Lodi.columns = ['2015','2016','2017','2018','2019','2020']
 

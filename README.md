@@ -1,7 +1,7 @@
 # COVID19 ANALYSIS
 
 ## Directory Structure
-'''
+```.
 COVID19/
 ├── doc
 ├── gretl
@@ -48,8 +48,7 @@ COVID19/
     ├── Umbria
     ├── Valle d'Aosta
     └── Veneto
-
-'''
+```
 
 ### plot 
 The [plot directory](./plot) contains

@@ -20,23 +20,104 @@ df.loc[df['NOME_PROVINCIA'] == "Valle d'Aosta/Valle d'Aoste",'NOME_PROVINCIA'] =
 df.loc[df['NOME_REGIONE'] == "Valle d'Aosta/Valle d'Aoste",'NOME_REGIONE'] = "Valle d'Aosta"
 df.loc[df['NOME_REGIONE'] == "Trentino-Alto Adige/Sdtirol",'NOME_REGIONE'] = "Trentino-Alto Adige"
 
+# ISTAT use '9999' instead of NaN so change and delete
+df = df[df.TOTALE_20 != 9999]
+
 reg = df['NOME_REGIONE'].unique()
 n_reg = 20
 prov = df['NOME_PROVINCIA'].unique() # prov name
 n_prov = len(prov) #107 (match with n_comuni_prov)
+n_comuni_anpr_tot = df.groupby('NOME_COMUNE').aggregate(np.sum).shape[0]
+n_comuni_tot = 7904 # sources https://www.tuttitalia.it/regioni/numero-comuni/
 
-# ISTAT use '9999' instead of NaN so change and delete
-df = df[df.TOTALE_20 != 9999]
+#####################################
+##### ITALY AS A WHOLE ANALYSIS #####
+#####################################
+print('Start to analyze aggregated ANPR data.')
+print("We have: {} Cities, {} Provinces and, obviously, {} Regions".format(n_comuni_anpr_tot,n_prov,n_reg))
+### implement comuni, provinces and regions variation
+it = df.groupby('GE').aggregate(np.sum).drop('REG',axis = 1)
+it = it.reset_index()
 
-##############################
-##### ALL ITALY ANALYSIS #####
-##############################
+date = []
+for i in range(len(it['GE'])):
+    date.append('0{}-{}'.format(str(it['GE'].iloc[i])[0],str(it['GE'].iloc[i])[1:]))
 
+
+it['Giorni'] = date
+it = it.set_index(['Giorni']).drop('GE',axis=1)        
+it.columns = ['2015','2016','2017','2018','2019','2020']
+
+it.drop('02-29',inplace=True)
+
+### split dataset
+max_dd_it = it.drop('2020',axis=1).max(axis=1)
+min_dd_it = it.drop('2020',axis=1).min(axis=1)
+it_2020 = it['2020']
+it_2019 = it['2019']
+diff_max_it = round(((it_2020/max_dd_it -1)*100).max(),2)
+data_diff_max_it = ((it_2020/max_dd_it -1)*100).idxmax()
+
+diff_it = (it_2020/max_dd_it -1)*100
+n_giorni_var_it = 0
+for i in range(len(max_dd_it)):
+    if diff_it.iloc[i] >= 100:
+        n_giorni_var_it += 1
+t = '02-21'        
+
+first_cases = np.where(it.index == t)[0]
+
+# region variation
+var_tot_it = (it_2020.loc[t:].sum()-max_dd_it.loc[t:].sum())/max_dd_it.loc[t:].sum() * 100
+var_tot_it_19_20 = (it_2020.loc[t:].sum()-it_2019.loc[t:].sum())/it_2019.loc[t:].sum() * 100
+
+## stuff for plot 
+legend_it = ['Min Daily Deceases 15-19 Italy', 'Max Daily Deceases 15-19 Italy', "Deceases 2020 Italy", "Firsts Confirmed Cases Italy"]
+note_it = "Notes:\nANPR Municipalities: {} over {} = {:6.2f}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni_anpr_tot,n_comuni_tot,(n_comuni_anpr_tot/n_comuni_tot)*100,data_diff_max_it,n_giorni_var_it,var_tot_it_19_20,var_tot_it)
+
+#### PLOT ####
+
+plt.figure(figsize=(14,8))
+
+# line plot 
+plt.plot(min_dd_it.values, 'black')
+plt.plot(max_dd_it.values, 'blue')
+plt.plot(it_2020.values, 'red', lw = 5, ls = '-')
+plt.axvline(first_cases, c = 'green',lw = 2, ls=':')
+
+plt.xlabel('Days')
+plt.ylabel('Deceases')
+plt.title(" Total Deceases in Italy Gen-Mar 2015-19 \n A comparison with 2020 data: COVID19 effect", fontsize=14)
+plt.legend(legend_it, frameon = False, fontsize=12, loc = 2)
+
+
+#plt.subplots_adjust(bottom=0.2)
+plt.suptitle(note_it, y=0.01,x = 0.01, fontsize=11, ha = 'left', va = 'bottom')
+
+# filling 
+plt.gca().fill_between(range(len(min_dd_it)),
+                       min_dd_it, 
+                       max_dd_it, 
+                       facecolor = "black",
+                       alpha = 0.2)
+
+# tick label 
+plt.xticks(range(0, len(min_dd_it), 5), min_dd_it.index[range(0, len(min_dd_it), 5)], rotation = '45')
+
+# removing the frame
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.tight_layout(pad = 5.1)
+
+# save plots
+plt.savefig('./../plot/covid_italy.png')
+plt.close()
+print('Aggregated ANPR done.')
 
 ##############################
 ##### REGIONS ANALYSIS #####
 ##############################
-print('Start to analyze regions.\n')
+print('\nStart to analyze regions.\n')
 
 # preallocation
 regions = {}
@@ -127,7 +208,7 @@ for r in reg:
         var_tot_19_20[r] = (regions_2020[r].loc[tt:].sum()-regions_2019[r].loc[tt:].sum())/regions_2019[r].loc[tt:].sum() * 100
 
         ## stuff for plot 
-        legend[r] = ['Min Daily Deceases 15-19 {}'.format(r), 'Max Daily Deceases 15-19 {}'.format(r), "Deceases 2020 {}".format(r), "Primi Casi Confermati Italia"]
+        legend[r] = ['Min Daily Deceases 15-19 {}'.format(r), 'Max Daily Deceases 15-19 {}'.format(r), "Deceases 2020 {}".format(r), "Firsts Confirmed Cases Italy"]
         note[r] = "Notes:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[r],n_comuni_reg['N_comuni'].loc[r],perc[r],data_diff_max[r],n_giorni_var[r],var_tot_19_20[r],var_tot_reg_max_2020[r])
 
         #### PLOT ####
@@ -262,7 +343,7 @@ for p in prov:
             first_cases = np.where(provinces_2020[p].index == '02-20')[0]
 
         ## stuff for plot 
-        legend[p] = ['Min Daily Deceases 15-19 {}'.format(p), 'Max Daily Deceases 15-19 {}'.format(p), "Deceases 2020 {}".format(p), "Primi Casi Confermati Italia"]
+        legend[p] = ['Min Daily Deceases 15-19 {}'.format(p), 'Max Daily Deceases 15-19 {}'.format(p), "Deceases 2020 {}".format(p), "Firsts Confirmed Cases Italy"]
         note[p] = "Note:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[p],n_comuni_prov['N_comuni'].loc[p],perc[p],data_diff_max[p],n_giorni_var[p],var_tot_19_20[p],var_tot_prov_max_2020[p])
 
         #### PLOT ####

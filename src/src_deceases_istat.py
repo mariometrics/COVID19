@@ -29,6 +29,11 @@ n_prov = len(prov) #107 (match with n_comuni_prov)
 df = df[df.TOTALE_20 != 9999]
 
 ##############################
+##### ALL ITALY ANALYSIS #####
+##############################
+
+
+##############################
 ##### REGIONS ANALYSIS #####
 ##############################
 print('Start to analyze regions.\n')

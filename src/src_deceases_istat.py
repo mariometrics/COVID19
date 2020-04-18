@@ -128,7 +128,7 @@ for r in reg:
 
         ## stuff for plot 
         legend[r] = ['Min Daily Deceases 15-19 {}'.format(r), 'Max Daily Deceases 15-19 {}'.format(r), "Deceases 2020 {}".format(r), "Primi Casi Confermati Italia"]
-        note[r] = "Note:\nComuni aderenti ANPR: {} su {} = {}% \nPicco stimato: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[r],n_comuni_reg['N_comuni'].loc[r],perc[r],data_diff_max[r],n_giorni_var[r],var_tot_19_20[r],var_tot_reg_max_2020[r])
+        note[r] = "Notes:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[r],n_comuni_reg['N_comuni'].loc[r],perc[r],data_diff_max[r],n_giorni_var[r],var_tot_19_20[r],var_tot_reg_max_2020[r])
 
         #### PLOT ####
         
@@ -263,7 +263,7 @@ for p in prov:
 
         ## stuff for plot 
         legend[p] = ['Min Daily Deceases 15-19 {}'.format(p), 'Max Daily Deceases 15-19 {}'.format(p), "Deceases 2020 {}".format(p), "Primi Casi Confermati Italia"]
-        note[p] = "Note:\nComuni aderenti ANPR: {} su {} = {}% \nPicco stimato: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[p],n_comuni_prov['N_comuni'].loc[p],perc[p],data_diff_max[p],n_giorni_var[p],var_tot_19_20[p],var_tot_prov_max_2020[p])
+        note[p] = "Note:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[p],n_comuni_prov['N_comuni'].loc[p],perc[p],data_diff_max[p],n_giorni_var[p],var_tot_19_20[p],var_tot_prov_max_2020[p])
 
         #### PLOT ####
         

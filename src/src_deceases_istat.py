@@ -111,7 +111,7 @@ for r in reg:
         diff[r] = (regions_2020[r]/max_dd[r] -1)*100
         n_giorni_var[r] = 0
         for i in range(len(max_dd[r])):
-            if diff[r].iloc[i] >= 200.01:
+            if diff[r].iloc[i] >= 100:
                 n_giorni_var[r] += 1
         
         # outbreak date
@@ -127,8 +127,8 @@ for r in reg:
         var_tot_19_20[r] = (regions_2020[r].loc[tt:].sum()-regions_2019[r].loc[tt:].sum())/regions_2019[r].loc[tt:].sum() * 100
 
         ## stuff for plot 
-        legend[r] = ['Min Decessi Giornalieri 15-19 {}'.format(r), 'Max Daily Deceases 15-19 {}'.format(r), "Decessi 2020 {}".format(r), "Primi Casi Confermati Italia"]
-        note[r] = "Note:\nComuni aderenti ANPR: {} su {} = {}% \nPicco stimato: {} \nN° giorni in cui i Decessi '20 sono stati almeno il triplo dei Max Decessi Giornalieri 15-19: {} \nVariazione % decessi 19-20 dal 21 Feb al 4 Apr: {:+6.2f}% \nVariazione % Decessi '20 - Max decessi 15-19 dal 21 Feb al 4 Apr: {:+6.2f}%".format(n_comuni[r],n_comuni_reg['N_comuni'].loc[r],perc[r],data_diff_max[r],n_giorni_var[r],var_tot_19_20[r],var_tot_reg_max_2020[r])
+        legend[r] = ['Min Daily Deceases 15-19 {}'.format(r), 'Max Daily Deceases 15-19 {}'.format(r), "Deceases 2020 {}".format(r), "Primi Casi Confermati Italia"]
+        note[r] = "Note:\nComuni aderenti ANPR: {} su {} = {}% \nPicco stimato: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[r],n_comuni_reg['N_comuni'].loc[r],perc[r],data_diff_max[r],n_giorni_var[r],var_tot_19_20[r],var_tot_reg_max_2020[r])
 
         #### PLOT ####
         
@@ -140,9 +140,9 @@ for r in reg:
         plt.plot(regions_2020[r].values, 'red', lw = 5, ls = '-')
         plt.axvline(first_cases, c = 'green',lw = 2, ls=':')
         
-        plt.xlabel('Giorni')
-        plt.ylabel('Deceduti')
-        plt.title("Decessi Totali in {} tra Gen-Mar 2015-19 \n Un confronto con i dati del 2020: effetto COVID19".format(r), fontsize=14)
+        plt.xlabel('Days')
+        plt.ylabel('Deceases')
+        plt.title(" Total Deceases in {} Gen-Mar 2015-19 \n A comparison with 2020 data: COVID19 effect".format(r), fontsize=14)
         plt.legend(legend[r], frameon = False, fontsize=12, loc = 2)
         
 
@@ -262,8 +262,8 @@ for p in prov:
             first_cases = np.where(provinces_2020[p].index == '02-20')[0]
 
         ## stuff for plot 
-        legend[p] = ['Min Decessi Giornalieri 15-19 {}'.format(p), 'Max Daily Deceases 15-19 {}'.format(p), "Decessi 2020 {}".format(p), "Primi Casi Confermati Italia"]
-        note[p] = "Note:\nComuni aderenti ANPR: {} su {} = {}% \nPicco stimato: {} \nN° giorni in cui i Decessi '20 sono stati almeno il doppio dei Max Decessi Giornalieri 15-19: {} \nVariazione % decessi 19-20 dal 21 Feb al 4 Apr: {:+6.2f}% \nVariazione % Decessi '20 - Max decessi 15-19 dal 21 Feb al 4 Apr: {:+6.2f}%".format(n_comuni[p],n_comuni_prov['N_comuni'].loc[p],perc[p],data_diff_max[p],n_giorni_var[p],var_tot_19_20[p],var_tot_prov_max_2020[p])
+        legend[p] = ['Min Daily Deceases 15-19 {}'.format(p), 'Max Daily Deceases 15-19 {}'.format(p), "Deceases 2020 {}".format(p), "Primi Casi Confermati Italia"]
+        note[p] = "Note:\nComuni aderenti ANPR: {} su {} = {}% \nPicco stimato: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[p],n_comuni_prov['N_comuni'].loc[p],perc[p],data_diff_max[p],n_giorni_var[p],var_tot_19_20[p],var_tot_prov_max_2020[p])
 
         #### PLOT ####
         
@@ -275,9 +275,9 @@ for p in prov:
         plt.plot(provinces_2020[p].values, 'red', lw = 5, ls = '-')
         plt.axvline(first_cases, c = 'green',lw = 2, ls=':')
         
-        plt.xlabel('Giorni')
-        plt.ylabel('Deceduti')
-        plt.title("Decessi Totali nella provincia di {} tra Gen-Mar 2015-19 \n Un confronto con i dati del 2020: effetto COVID19".format(p), fontsize=14)
+        plt.xlabel('Days')
+        plt.ylabel('Deceases')
+        plt.title("Total Deceases in {} province Gen-Mar 2015-19 \n A comparison with 2020 data: COVID19 effect".format(p), fontsize=14)
         plt.legend(legend[p], frameon = False, fontsize=12, loc = 2)
         
 

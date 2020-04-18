@@ -4,7 +4,6 @@
 ```.
 COVID19/
 ├── doc
-├── gretl
 ├── plot
 │   ├── Abruzzo
 │   ├── Basilicata

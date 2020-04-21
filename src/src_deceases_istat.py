@@ -26,7 +26,7 @@ df = df[df.TOTALE_20 != 9999]
 reg = df['NOME_REGIONE'].unique()
 n_reg = 20
 prov = df['NOME_PROVINCIA'].unique() # prov name
-n_prov = len(prov) #107 (match with n_comuni_prov)
+n_prov = len(prov) #103 (match with n_comuni_prov)
 n_comuni_anpr_tot = df.groupby('NOME_COMUNE').aggregate(np.sum).shape[0]
 n_comuni_tot = 7904 # sources https://www.tuttitalia.it/regioni/numero-comuni/
 

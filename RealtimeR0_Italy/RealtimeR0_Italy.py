@@ -12,9 +12,9 @@ from scipy import stats as sps
 from scipy.interpolate import interp1d
 
 from IPython.display import clear_output
-#from IPython.display import set_matplotlib_formats
-#set_matplotlib_formats('retina')
-get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'retina'")
+from IPython.display import set_matplotlib_formats
+set_matplotlib_formats('retina')
+#get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'retina'")
 
 # Evaluating the Likelihood Function
 

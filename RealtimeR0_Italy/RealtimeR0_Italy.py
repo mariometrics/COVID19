@@ -7,13 +7,14 @@ from matplotlib import dates as mdates
 from matplotlib import ticker
 from matplotlib.colors import ListedColormap
 from matplotlib.patches import Patch
+import matplotlib.font_manager
 
 from scipy import stats as sps
 from scipy.interpolate import interp1d
 
 from IPython.display import clear_output
 from IPython.display import set_matplotlib_formats
-set_matplotlib_formats('retina')
+#set_matplotlib_formats('retina')
 #get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'retina'")
 
 # Evaluating the Likelihood Function
@@ -159,6 +160,7 @@ ax = smoothed.plot(label='Smoothed',
 ax.get_figure().set_facecolor('w')
 path = 'smoothed_{}.png'.format(state_name)
 plt.savefig(path)
+plt.close()
 
 
 # ### Running the Algorithm
@@ -313,6 +315,7 @@ ax.xaxis.set_major_locator(mdates.WeekdayLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
 path1 = 'rt_{}.png'.format(state_name)
 plt.savefig(path1)
+plt.close()
 
 #Choosing the optimal $\sigma$
 #
@@ -412,6 +415,8 @@ for i, (state_name, result) in enumerate(final_results.groupby('denominazione_re
 
 fig.tight_layout()
 fig.set_facecolor('w')
+fig.savefig('rt_regions.png')
+plt.close()
 
 
 #Export Data to CSV
@@ -473,21 +478,26 @@ def plot_standings(mr, figsize=None, title='Most Recent $R_t$ by State'):
     return fig, ax
 
 mr.sort_values('ML', inplace=True)
-plot_standings(mr);
+plot_standings(mr)
 plt.savefig('rt_italy.png')
+plt.close()
 
 mr.sort_values('High_90', inplace=True)
-plot_standings(mr);
+plot_standings(mr)
 plt.savefig('rt_italy_sorted.png')
-
+plt.close()
 
 show = mr[mr.High_90.le(1)].sort_values('ML')
-fig, ax = plot_standings(show, title='Likely Under Control');
+fig, ax = plot_standings(show, title='Likely Under Control')
+
 plt.savefig('likely_under_control_italy.png')
+plt.close()
 
 show = mr[mr.Low_90.ge(1.0)].sort_values('Low_90')
-fig, ax = plot_standings(show, title='Likely Not Under Control');
+fig, ax = plot_standings(show, title='Likely Not Under Control')
 ax.get_legend().remove()
+
 plt.savefig('likelynot_under_control_italy.png')
+plt.close()
 
 

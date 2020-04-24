@@ -435,9 +435,9 @@ ERROR_BAR_COLOR = [.3,.3,.3]
 filtered = final_results.index.get_level_values(0)
 mr = final_results.loc[filtered].groupby(level=0)[['ML', 'High_90', 'Low_90']].last()
 
-def plot_standings(mr, figsize=None, title='Most Recent ({}) $R_t$ by State'.format(str(index.get_level_values('data')[-2]+pd.Timedelta(days=1))[:10])):
+def plot_standings(mr, figsize=None, title='Most Recent ({}) $R_t$ by Region'.format(str(index.get_level_values('data')[-2]+pd.Timedelta(days=1))[:10])):
     if not figsize:
-        figsize = ((15.9/50)*len(mr)+.1,2.5)
+        figsize = (14,8)
         
     fig, ax = plt.subplots(figsize=figsize)
 

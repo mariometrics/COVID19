@@ -152,13 +152,14 @@ original.plot(title=f"{state_name} New Cases per Day",
                alpha=.5,
                label='Actual',
                legend=True,
-             figsize=(500/72, 300/72))
+             figsize=(14,8))
 
 ax = smoothed.plot(label='Smoothed',
                    legend=True)
 
 ax.get_figure().set_facecolor('w')
 path = 'smoothed_{}.png'.format(state_name)
+plt.tight_layout()
 plt.savefig(path)
 plt.close()
 
@@ -307,13 +308,14 @@ def plot_rt(result, ax, state_name):
     fig.set_facecolor('w')
 
     
-fig, ax = plt.subplots(figsize=(600/72,400/72))
+fig, ax = plt.subplots(figsize=(14,8))
 
 plot_rt(result, ax, state_name)
 ax.set_title(f'Real-time $R_t$ for {state_name}')
 ax.xaxis.set_major_locator(mdates.WeekdayLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
 path1 = 'rt_{}.png'.format(state_name)
+plt.tight_layout()
 plt.savefig(path1)
 plt.close()
 
@@ -433,7 +435,7 @@ ERROR_BAR_COLOR = [.3,.3,.3]
 filtered = final_results.index.get_level_values(0)
 mr = final_results.loc[filtered].groupby(level=0)[['ML', 'High_90', 'Low_90']].last()
 
-def plot_standings(mr, figsize=None, title='Most Recent $R_t$ by State'):
+def plot_standings(mr, figsize=None, title='Most Recent ({}) $R_t$ by State'.format(str(index.get_level_values('data')[-2]+pd.Timedelta(days=1))[:10])):
     if not figsize:
         figsize = ((15.9/50)*len(mr)+.1,2.5)
         
@@ -457,7 +459,7 @@ def plot_standings(mr, figsize=None, title='Most Recent $R_t$ by State'):
         if mr.loc[state_name,'ML'] <= 1:
             bar.set_color(PARTIAL_COLOR)
     
-    labels = mr.index.to_series()
+    labels = mr.index.to_series().replace({'Friuli Venezia Giulia':'FVG','Emilia-Romagna':'ER','P.A. Bolzano':'Bolzano','P.A. Trento':'Trento',"Valle d'Aosta":'V.Aosta'})
     ax.set_xticklabels(labels, rotation=90, fontsize=11)
     ax.margins(0)
     ax.set_ylim(0,2.)
@@ -479,24 +481,26 @@ def plot_standings(mr, figsize=None, title='Most Recent $R_t$ by State'):
 
 mr.sort_values('ML', inplace=True)
 plot_standings(mr)
+plt.tight_layout(pad=5.1)
 plt.savefig('rt_italy.png')
 plt.close()
 
 mr.sort_values('High_90', inplace=True)
 plot_standings(mr)
+plt.tight_layout(pad=5.1)
 plt.savefig('rt_italy_sorted.png')
 plt.close()
 
 show = mr[mr.High_90.le(1)].sort_values('ML')
 fig, ax = plot_standings(show, title='Likely Under Control')
-
+plt.tight_layout(pad=5.1)
 plt.savefig('likely_under_control_italy.png')
 plt.close()
 
 show = mr[mr.Low_90.ge(1.0)].sort_values('Low_90')
 fig, ax = plot_standings(show, title='Likely Not Under Control')
 ax.get_legend().remove()
-
+plt.tight_layout(pad=5.1)
 plt.savefig('likelynot_under_control_italy.png')
 plt.close()
 

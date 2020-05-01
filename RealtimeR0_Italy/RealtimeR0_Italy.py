@@ -417,7 +417,7 @@ for i, (state_name, result) in enumerate(final_results.groupby('denominazione_re
 
 fig.tight_layout()
 fig.set_facecolor('w')
-fig.savefig('rt_regions.png')
+fig.savefig('rt_Regions.png')
 plt.close()
 
 
@@ -435,7 +435,7 @@ ERROR_BAR_COLOR = [.3,.3,.3]
 filtered = final_results.index.get_level_values(0)
 mr = final_results.loc[filtered].groupby(level=0)[['ML', 'High_90', 'Low_90']].last()
 
-def plot_standings(mr, figsize=None, title='Most Recent ({}) $R_t$ by Region'.format(str(index.get_level_values('data')[-2]+pd.Timedelta(days=1))[:10])):
+def plot_standings(mr, figsize=None, title='Most Recent ({}) $R_t$ by Region'.format(str(result.index.get_level_values('data')[-2]+pd.Timedelta(days=1))[:10])):
     if not figsize:
         figsize = (14,8)
         
@@ -482,26 +482,26 @@ def plot_standings(mr, figsize=None, title='Most Recent ({}) $R_t$ by Region'.fo
 mr.sort_values('ML', inplace=True)
 plot_standings(mr)
 plt.tight_layout(pad=5.1)
-plt.savefig('rt_italy.png')
+plt.savefig('rt_Italy.png')
 plt.close()
 
 mr.sort_values('High_90', inplace=True)
 plot_standings(mr)
 plt.tight_layout(pad=5.1)
-plt.savefig('rt_italy_sorted.png')
+plt.savefig('rt_Italy_sorted.png')
 plt.close()
 
 show = mr[mr.High_90.le(1)].sort_values('ML')
 fig, ax = plot_standings(show, title='Likely Under Control')
 plt.tight_layout(pad=5.1)
-plt.savefig('likely_under_control_italy.png')
+plt.savefig('likely_under_control_Italy.png')
 plt.close()
 
 show = mr[mr.Low_90.ge(1.0)].sort_values('Low_90')
 fig, ax = plot_standings(show, title='Likely Not Under Control')
 ax.get_legend().remove()
 plt.tight_layout(pad=5.1)
-plt.savefig('likelynot_under_control_italy.png')
+plt.savefig('likelynot_under_control_Italy.png')
 plt.close()
 
 

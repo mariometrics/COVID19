@@ -105,6 +105,35 @@ states = pd.read_csv(url,
                      parse_dates=['data'],
                      squeeze=True).sort_index()
 
+# Italy as a whole
+reg_names = states.index.get_level_values(0).unique().to_list()
+Italy = states.reset_index()
+Italy = Italy.groupby('data').sum()
+Italy_newcases = Italy.diff()
+Italy_smoothed = Italy_newcases.rolling(7,
+        win_type='gaussian',
+        min_periods=1,
+        center=True).mean(std=2).round()
+
+Italy_smoothed = Italy_smoothed.iloc[1:]
+Italy_original = Italy_newcases.loc[Italy_smoothed.index]
+
+plt.figure(figsize=(14,8))
+plt.plot(Italy_original.values, 'black',linestyle = ':', label = 'Actual')
+plt.plot(Italy_smoothed.values, label = 'Smoothed')
+plt.title("Italy New Cases per Day")
+plt.legend()
+
+
+# tick label 
+plt.xticks(range(0, len(Italy_smoothed), 10), Italy_smoothed.index[range(0, len(Italy_smoothed), 10)], rotation = '45')
+
+# removing the frame
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.tight_layout()
+plt.savefig('Italy_smoothed.png')
+plt.close()
 
 # Taking a look at the state, we need to start the analysis when there are a consistent number of cases each day. Find the last zero new case day and start on the day after that.
 # 
@@ -142,26 +171,28 @@ def prepare_cases(cases, cutoff=25):
 #        print(original)
 #    return original, smoothed
 
-cases = states.xs(state_name).rename(f"{state_name} cases")
 
-original, smoothed = prepare_cases(cases)
+for reg in reg_names:
+    cases = states.xs(reg).rename(f"{reg} cases")
+    
+    original, smoothed = prepare_cases(cases)
 
-original.plot(title=f"{state_name} New Cases per Day",
-               c='k',
-               linestyle=':',
-               alpha=.5,
-               label='Actual',
-               legend=True,
-             figsize=(14,8))
+    original.plot(title=f"{reg} New Cases per Day",
+                   c='k',
+                   linestyle=':',
+                   alpha=.5,
+                   label='Actual',
+                   legend=True,
+                 figsize=(14,8))
 
-ax = smoothed.plot(label='Smoothed',
-                   legend=True)
+    ax = smoothed.plot(label='Smoothed',
+                       legend=True)
 
-ax.get_figure().set_facecolor('w')
-path = 'smoothed_{}.png'.format(state_name)
-plt.tight_layout()
-plt.savefig(path)
-plt.close()
+    ax.get_figure().set_facecolor('w')
+    path = 'smoothed_{}.png'.format(reg)
+    plt.tight_layout()
+    plt.savefig(path)
+    plt.close()
 
 
 # ### Running the Algorithm

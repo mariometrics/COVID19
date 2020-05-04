@@ -1,174 +1,296 @@
 Comune,2019,2020,Variazione %
-Albinea,20,29,45.0
-Alseno,16,29,81.25
-Anzola dell'Emilia,49,36,-26.53
-Bagnolo in Piano,28,42,50.0
-Baiso,14,14,0.0
-Baricella,33,26,-21.21
-Bastiglia,14,12,-14.29
-Bellaria-Igea Marina,53,62,16.98
-Bentivoglio,15,12,-20.0
-Bettola,12,26,116.67
-Bibbiano,23,25,8.7
-Bologna,1323,1392,5.22
-Bomporto,18,28,55.56
-Bondeno,59,75,27.12
-Boretto,13,23,76.92
-Borgo Tossignano,14,13,-7.14
-Borgonovo Val Tidone,24,37,54.17
+Agazzano,8,12,50.0
+Albareto,14,12,-14.29
+Albinea,18,28,55.56
+Alseno,16,25,56.25
+Alta Val Tidone,20,16,-20.0
+Anzola dell'Emilia,48,35,-27.08
+Argelato,34,32,-5.88
+Argenta,84,80,-4.76
+Bagnara di Romagna,9,7,-22.22
+Bagno di Romagna,32,27,-15.62
+Bagnolo in Piano,28,39,39.29
+Baiso,14,15,7.14
+Baricella,31,24,-22.58
+Bastiglia,13,11,-15.38
+Bedonia,12,30,150.0
+Bellaria-Igea Marina,50,57,14.0
+Berceto,15,26,73.33
+Bertinoro,34,24,-29.41
+Besenzone,4,4,0.0
+Bettola,11,26,136.36
+Bibbiano,24,22,-8.33
+Bologna,1280,1340,4.69
+Bomporto,17,28,64.71
+Bondeno,55,70,27.27
+Bore,4,7,75.0
+Boretto,13,21,61.54
+Borghi,7,10,42.86
+Borgo Tossignano,13,13,0.0
+Borgo Val di Taro,34,33,-2.94
+Borgonovo Val Tidone,22,32,45.45
 Brescello,8,18,125.0
-Busseto,25,34,36.0
-Cadelbosco di Sopra,37,26,-29.73
-Calderara di Reno,39,34,-12.82
-Calendasco,7,13,85.71
-Calestano,9,20,122.22
-Campegine,21,21,0.0
-Campogalliano,25,32,28.0
+Brisighella,40,26,-35.0
+Budrio,52,66,26.92
+Busseto,25,33,32.0
+Cadelbosco di Sopra,37,27,-27.03
+Calderara di Reno,40,32,-20.0
+Calestano,9,24,166.67
+Campegine,20,20,0.0
+Campogalliano,24,32,33.33
+Camposanto,11,13,18.18
+Camugnano,7,9,28.57
 Caorso,21,37,76.19
-Carpaneto Piacentino,24,34,41.67
-Carpi,223,239,7.17
-Carpineti,18,25,38.89
-Casalgrande,62,63,1.61
-Casina,25,27,8.0
-Casola Valsenio,10,16,60.0
-Castel Guelfo di Bologna,12,10,-16.67
+Carpaneto Piacentino,23,32,39.13
+Carpi,216,227,5.09
+Carpineti,18,23,27.78
+Casalecchio di Reno,134,118,-11.94
+Casalfiumanese,6,6,0.0
+Casalgrande,62,60,-3.23
+Casina,25,22,-12.0
+Casola Valsenio,9,14,55.56
+Castel Guelfo di Bologna,13,9,-30.77
+Castel Maggiore,41,45,9.76
+Castel San Giovanni,51,74,45.1
+Castel San Pietro Terme,91,74,-18.68
 Castel d'Aiano,3,10,233.33
-Castell'Arquato,15,30,100.0
-Castellarano,34,52,52.94
+Castel del Rio,7,6,-14.29
+Castel di Casio,13,10,-23.08
+Casteldelci,1,1,0.0
+Castelfranco Emilia,100,87,-13.0
+Castell'Arquato,14,26,85.71
+Castellarano,35,46,31.43
 Castello d'Argile,15,17,13.33
-Castelnovo di Sotto,27,34,25.93
-Castelnovo ne' Monti,39,50,28.21
-Castelvetro Piacentino,13,47,261.54
-Castrocaro Terme e Terra del Sole,18,23,27.78
-Cattolica,47,67,42.55
-Cesena,302,334,10.6
-Civitella di Romagna,11,13,18.18
-Collecchio,37,85,129.73
-Colorno,18,44,144.44
-Comacchio,79,80,1.27
+Castelnovo di Sotto,25,34,36.0
+Castelnovo ne' Monti,39,49,25.64
+Castelnuovo Rangone,32,40,25.0
+Castelvetro Piacentino,13,45,246.15
+Castenaso,51,42,-17.65
+Castiglione dei Pepoli,31,26,-16.13
+Castrocaro Terme e Terra del Sole,18,22,22.22
+Cattolica,48,65,35.42
+Cavezzo,20,28,40.0
+Cavriago,39,35,-10.26
+Cento,106,86,-18.87
+Cerignale,0,1,inf
+Cesena,291,322,10.65
+Cesenatico,72,72,0.0
+Civitella di Romagna,10,13,30.0
+Codigoro,42,59,40.48
+Collecchio,37,81,118.92
+Colorno,18,42,133.33
+Comacchio,80,78,-2.5
+Compiano,4,8,100.0
+Concordia sulla Secchia,26,32,23.08
 Conselice,37,31,-16.22
-Coriano,18,35,94.44
+Copparo,73,76,4.11
+Coriano,18,33,83.33
 Corniglio,16,10,-37.5
-Correggio,77,105,36.36
-Cortemaggiore,5,25,400.0
-Cotignola,26,25,-3.85
-Faenza,213,203,-4.69
-Fanano,16,20,25.0
-Felino,28,39,39.29
-Fidenza,78,171,119.23
-Fiorano Modenese,37,44,18.92
-Fiorenzuola d'Arda,44,124,181.82
-Fontanellato,28,36,28.57
-Fontevivo,22,33,50.0
-Forlimpopoli,46,42,-8.7
-Formigine,81,131,61.73
-Fornovo di Taro,23,33,43.48
-Fusignano,32,29,-9.38
-Gattatico,19,16,-15.79
-Gatteo,19,25,31.58
-Gazzola,2,14,600.0
-Goro,20,17,-15.0
-Gossolengo,12,16,33.33
+Correggio,74,100,35.14
+Corte Brugnatella,4,5,25.0
+Cortemaggiore,5,24,380.0
+Cotignola,25,25,0.0
+Dovadola,4,7,75.0
+Dozza,17,15,-11.76
+Faenza,210,204,-2.86
+Fanano,15,19,26.67
+Farini,11,13,18.18
+Felino,28,38,35.71
+Ferrara,499,504,1.0
+Ferriere,18,13,-27.78
+Fidenza,77,160,107.79
+Finale Emilia,55,59,7.27
+Fiorano Modenese,37,39,5.41
+Fiorenzuola d'Arda,43,124,188.37
+Fiscaglia,41,50,21.95
+Fiumalbo,6,5,-16.67
+Fontanelice,2,4,100.0
+Fontanellato,26,31,19.23
+Fontevivo,21,31,47.62
+Forl,389,377,-3.08
+Forlimpopoli,46,38,-17.39
+Formigine,74,127,71.62
+Fornovo di Taro,22,31,40.91
+Frassinoro,11,8,-27.27
+Fusignano,30,27,-10.0
+Gaggio Montano,10,19,90.0
+Gambettola,24,30,25.0
+Gattatico,19,14,-26.32
+Gatteo,18,25,38.89
+Gazzola,1,14,1300.0
+Gemmano,4,4,0.0
+Goro,19,16,-15.79
+Gossolengo,12,19,58.33
 Gragnano Trebbiense,8,14,75.0
-Granarolo dell'Emilia,26,35,34.62
-Gropparello,12,12,0.0
-Gualtieri,19,24,26.32
-Guastalla,50,57,14.0
-Jolanda di Savoia,22,14,-36.36
-Lama Mocogno,15,17,13.33
-Langhirano,37,70,89.19
-Lesignano de' Bagni,11,17,54.55
+Granarolo dell'Emilia,24,35,45.83
+Grizzana Morandi,13,13,0.0
+Gropparello,11,13,18.18
+Gualtieri,20,23,15.0
+Guastalla,49,56,14.29
+Imola,242,235,-2.89
+Jolanda di Savoia,21,13,-38.1
+Lama Mocogno,14,17,21.43
+Langhirano,35,65,85.71
+Lesignano de' Bagni,10,16,60.0
 Lizzano in Belvedere,5,18,260.0
-Loiano,14,16,14.29
-Lugagnano Val d'Arda,17,19,11.76
-Lugo,130,137,5.38
-Luzzara,24,38,58.33
-Maranello,49,62,26.53
-Marano sul Panaro,16,14,-12.5
-Marzabotto,25,26,4.0
+Loiano,13,16,23.08
+Longiano,18,16,-11.11
+Lugagnano Val d'Arda,19,20,5.26
+Lugo,129,135,4.65
+Luzzara,24,36,50.0
+Maiolo,4,4,0.0
+Maranello,47,57,21.28
+Marano sul Panaro,14,14,0.0
+Marzabotto,24,26,8.33
+Masi Torello,12,10,-16.67
 Massa Lombarda,33,38,15.15
-Medesano,32,73,128.12
-Medicina,55,79,43.64
-Meldola,25,41,64.0
-Mercato Saraceno,20,21,5.0
-Mesola,24,29,20.83
+Medesano,32,71,121.88
+Medicina,54,75,38.89
+Medolla,19,15,-21.05
+Meldola,24,39,62.5
+Mercato Saraceno,21,21,0.0
+Mesola,24,28,16.67
 Minerbio,37,35,-5.41
-Modena,623,659,5.78
-Modigliana,20,17,-15.0
-Molinella,59,62,5.08
-Monchio delle Corti,9,12,33.33
-Montecchio Emilia,45,53,17.78
-Montechiarugolo,44,55,25.0
-Montefiorino,16,10,-37.5
-Monticelli d'Ongina,20,44,120.0
-Morciano di Romagna,15,21,40.0
+Mirandola,66,84,27.27
+Misano Adriatico,33,48,45.45
+Modena,604,634,4.97
+Modigliana,20,16,-20.0
+Molinella,58,57,-1.72
+Monchio delle Corti,9,11,22.22
+Mondaino,4,3,-25.0
+Monghidoro,12,17,41.67
+Monte San Pietro,32,30,-6.25
+Montecchio Emilia,44,52,18.18
+Montechiarugolo,44,50,13.64
+Montecreto,5,6,20.0
+Montefiore Conca,6,8,33.33
+Montefiorino,15,11,-26.67
+Montegridolfo,4,3,-25.0
+Monterenzio,21,18,-14.29
+Montese,19,17,-10.53
+Montiano,11,3,-72.73
+Monticelli d'Ongina,20,42,110.0
+Monzuno,13,19,46.15
+Morciano di Romagna,14,20,42.86
+Mordano,15,15,0.0
+Morfasso,8,10,25.0
 Neviano degli Arduini,21,31,47.62
-Noceto,45,51,13.33
-Novi di Modena,48,37,-22.92
-Palanzano,7,12,71.43
-Parma,591,920,55.67
-Pavullo nel Frignano,57,51,-10.53
-Piacenza,321,719,123.99
-Pianoro,55,63,14.55
-Pieve di Cento,19,26,36.84
-Podenzano,25,47,88.0
+Noceto,45,49,8.89
+Nonantola,37,32,-13.51
+Novafeltria,30,24,-20.0
+Novi di Modena,43,37,-13.95
+Ostellato,20,26,30.0
+Ottone,5,3,-40.0
+Palagano,16,9,-43.75
+Palanzano,6,12,100.0
+Parma,578,872,50.87
+Pavullo nel Frignano,54,46,-14.81
+Pellegrino Parmense,6,8,33.33
+Piacenza,316,713,125.63
+Pianello Val Tidone,14,10,-28.57
+Pianoro,54,66,22.22
+Pieve di Cento,18,26,44.44
+Pievepelago,11,9,-18.18
+Piozzano,3,7,133.33
+Podenzano,25,44,76.0
 Poggio Torriana,13,14,7.69
-Polesine Zibello,16,20,25.0
-Polinago,8,12,50.0
+Polesine Zibello,14,18,28.57
+Polinago,8,11,37.5
+Ponte dell'Olio,28,27,-3.57
 Pontenure,19,35,84.21
-Portomaggiore,49,53,8.16
-Poviglio,23,31,34.78
-Predappio,17,31,82.35
-Quattro Castella,30,49,63.33
-Ravarino,13,21,61.54
-Reggiolo,29,34,17.24
-Riccione,110,131,19.09
-Rimini,443,527,18.96
-Rio Saliceto,19,25,31.58
+Portico e San Benedetto,2,3,50.0
+Portomaggiore,47,52,10.64
+Poviglio,21,29,38.1
+Predappio,16,31,93.75
+Premilcuore,4,8,100.0
+Prignano sulla Secchia,14,11,-21.43
+Quattro Castella,26,47,80.77
+Ravarino,13,20,53.85
+Ravenna,552,489,-11.41
+Reggio nell'Emilia,468,485,3.63
+Reggiolo,29,32,10.34
+Riccione,110,126,14.55
+Rimini,438,506,15.53
+Rio Saliceto,19,24,26.32
 Riolo Terme,12,18,50.0
-Rocca San Casciano,12,11,-8.33
-Rottofreno,27,59,118.52
-Rubiera,42,44,4.76
-Russi,50,50,0.0
-Sala Baganza,15,40,166.67
-Sala Bolognese,26,16,-38.46
-Salsomaggiore Terme,73,128,75.34
+Riolunato,1,5,400.0
+Riva del Po,36,33,-8.33
+Rivergaro,28,55,96.43
+Rocca San Casciano,11,10,-9.09
+Roccabianca,5,21,320.0
+Roncofreddo,13,14,7.69
+Rottofreno,26,57,119.23
+Rubiera,41,41,0.0
+Russi,48,48,0.0
+Sala Baganza,14,39,178.57
+Sala Bolognese,24,15,-37.5
+Salsomaggiore Terme,73,120,64.38
 Saludecio,7,12,71.43
-San Clemente,8,16,100.0
-San Giorgio Piacentino,24,36,50.0
-San Giovanni in Marignano,23,29,26.09
+San Benedetto Val di Sambro,17,16,-5.88
+San Cesario sul Panaro,16,12,-25.0
+San Clemente,8,17,112.5
+San Felice sul Panaro,33,37,12.12
+San Giorgio Piacentino,23,34,47.83
+San Giorgio di Piano,22,21,-4.55
+San Giovanni in Marignano,24,32,33.33
+San Giovanni in Persiceto,78,89,14.1
+San Lazzaro di Savena,112,90,-19.64
 San Martino in Rio,19,33,73.68
-San Mauro Pascoli,36,28,-22.22
+San Mauro Pascoli,34,26,-23.53
+San Pietro in Cerro,3,6,100.0
+San Polo d'Enza,18,26,44.44
+San Possidonio,10,17,70.0
+San Prospero,10,10,0.0
 San Secondo Parmense,16,26,62.5
-Sant'Ilario d'Enza,31,60,93.55
-Santa Sofia,16,14,-12.5
-Sarmato,9,20,122.22
-Sarsina,11,13,18.18
-Sasso Marconi,59,50,-15.25
-Sassuolo,112,155,38.39
-Scandiano,93,104,11.83
-Serramazzoni,16,31,93.75
-Sestola,14,20,42.86
-Sissa Trecasali,20,76,280.0
-Sogliano al Rubicone,5,12,140.0
-Solarolo,18,21,16.67
-Soliera,37,53,43.24
-Solignano,5,12,140.0
-Soragna,17,33,94.12
-Sorbolo Mezzani,45,59,31.11
-Terre del Reno,48,44,-8.33
-Tizzano Val Parma,12,16,33.33
-Toano,23,21,-8.7
-Torrile,20,25,25.0
-Traversetolo,41,56,36.59
-Travo,9,27,200.0
-Varsi,9,10,11.11
-Ventasso,17,38,123.53
-Vergato,25,34,36.0
-Verucchio,19,20,5.26
-Vezzano sul Crostolo,10,15,50.0
-Viano,11,12,9.09
-Vignola,74,84,13.51
-Vigolzone,9,20,122.22
-Ziano Piacentino,7,17,142.86
-Zola Predosa,61,60,-1.64
+Sant'Agata sul Santerno,8,5,-37.5
+Sant'Ilario d'Enza,30,59,96.67
+Santa Sofia,17,13,-23.53
+Santarcangelo di Romagna,55,62,12.73
+Sarmato,9,21,133.33
+Sarsina,10,13,30.0
+Sasso Marconi,59,53,-10.17
+Sassuolo,108,146,35.19
+Savignano sul Panaro,26,30,15.38
+Savignano sul Rubicone,39,41,5.13
+Scandiano,87,97,11.49
+Serramazzoni,15,29,93.33
+Sestola,12,19,58.33
+Sissa Trecasali,20,71,255.0
+Sogliano al Rubicone,4,12,200.0
+Solarolo,18,20,11.11
+Soliera,36,50,38.89
+Solignano,5,11,120.0
+Soragna,16,33,106.25
+Sorbolo Mezzani,43,56,30.23
+Spilamberto,37,50,35.14
+Talamello,4,9,125.0
+Terenzo,6,4,-33.33
+Terre del Reno,47,40,-14.89
+Tizzano Val Parma,12,15,25.0
+Toano,22,21,-4.55
+Torrile,20,24,20.0
+Traversetolo,40,52,30.0
+Travo,11,24,118.18
+Tredozio,5,9,80.0
+Tresignana,26,29,11.54
+Valmozzola,1,5,400.0
+Valsamoggia,101,96,-4.95
+Varano de' Melegari,13,8,-38.46
+Varsi,10,9,-10.0
+Ventasso,16,30,87.5
+Vergato,24,33,37.5
+Vernasca,6,13,116.67
+Verucchio,20,21,5.0
+Vetto,10,11,10.0
+Vezzano sul Crostolo,9,15,66.67
+Viano,11,9,-18.18
+Vigarano Mainarda,19,24,26.32
+Vignola,71,79,11.27
+Vigolzone,9,19,111.11
+Villa Minozzo,17,23,35.29
+Villanova sull'Arda,5,9,80.0
+Voghiera,10,21,110.0
+Zerba,1,0,-100.0
+Ziano Piacentino,7,15,114.29
+Zocca,12,15,25.0
+Zola Predosa,59,55,-6.78

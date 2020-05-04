@@ -1,18 +1,278 @@
 Comune,2019,2020,Variazione %
-Acquapendente,30,25,-16.67
-Atina,13,17,30.77
-Canino,17,25,47.06
-Casalvieri,7,13,85.71
-Cassino,104,123,18.27
-Civita Castellana,43,48,11.63
-Civitavecchia,184,157,-14.67
-Fumone,7,11,57.14
-Lanuvio,33,37,12.12
-Manziana,23,17,-26.09
-Marta,10,13,30.0
-Montalto di Castro,15,25,66.67
+Accumoli,2,6,200.0
+Acquafondata,1,1,0.0
+Acquapendente,28,25,-10.71
+Acuto,12,8,-33.33
+Albano Laziale,90,94,4.44
+Allumiere,13,12,-7.69
+Alvito,14,8,-42.86
+Amaseno,19,13,-31.58
+Amatrice,16,12,-25.0
+Anagni,73,54,-26.03
+Anticoli Corrado,1,5,400.0
+Antrodoco,9,11,22.22
+Aprilia,184,159,-13.59
+Aquino,7,14,100.0
+Arce,26,21,-19.23
+Arcinazzo Romano,5,6,20.0
+Ariccia,58,42,-27.59
+Arlena di Castro,2,1,-50.0
+Arnara,5,6,20.0
+Arpino,37,25,-32.43
+Arsoli,2,6,200.0
+Ascrea,1,3,200.0
+Atina,15,18,20.0
+Bagnoregio,13,10,-23.08
+Barbarano Romano,6,6,0.0
+Bassano in Teverina,4,7,75.0
+Bassiano,7,6,-14.29
+Bellegra,3,9,200.0
+Belmonte Castello,2,5,150.0
+Belmonte in Sabina,4,1,-75.0
+Blera,14,15,7.14
+Bolsena,22,16,-27.27
+Borbona,2,5,150.0
+Borgo Velino,1,7,600.0
+Borgorose,15,19,26.67
+Bracciano,49,52,6.12
+Calcata,2,1,-50.0
+Camerata Nuova,1,1,0.0
+Campodimele,2,3,50.0
+Campoli Appennino,7,12,71.43
+Canepina,13,9,-30.77
+Canino,17,23,35.29
+Canterano,2,0,-100.0
+Capena,28,24,-14.29
+Capranica Prenestina,1,3,200.0
+Caprarola,14,17,21.43
+Carbognano,10,6,-40.0
+Casalvieri,8,14,75.0
+Casape,5,3,-40.0
+Cassino,104,120,15.38
+Castel Madama,18,24,33.33
+Castel San Pietro Romano,5,4,-20.0
+Castel Sant'Elia,12,7,-41.67
+Castel di Tora,1,0,-100.0
+Castelforte,10,11,10.0
+Castelliri,18,8,-55.56
+Castelnuovo Parano,2,1,-50.0
+Castelnuovo di Farfa,3,1,-66.67
+Castelnuovo di Porto,18,21,16.67
+Castiglione in Teverina,7,6,-14.29
+Ceccano,72,57,-20.83
+Cellere,5,5,0.0
+Ceprano,18,32,77.78
+Cerreto Laziale,4,1,-75.0
+Cervaro,25,24,-4.0
+Ciciliano,5,2,-60.0
+Cineto Romano,6,1,-83.33
+Cisterna di Latina,84,75,-10.71
+Cittareale,0,1,inf
+Civita Castellana,39,47,20.51
+Civitavecchia,178,155,-12.92
+Civitella d'Agliano,10,5,-50.0
+Collalto Sabino,3,0,-100.0
+Colle San Magno,2,1,-50.0
+Colle di Tora,2,1,-50.0
+Colleferro,63,64,1.59
+Collegiove,2,1,-50.0
+Collepardo,5,5,0.0
+Collevecchio,5,4,-20.0
+Colonna,8,7,-12.5
+Concerviano,1,3,200.0
+Configni,4,3,-25.0
+Corchiano,10,6,-40.0
+Cori,30,27,-10.0
+Cottanello,1,0,-100.0
+Fabrica di Roma,25,17,-32.0
+Faleria,9,9,0.0
+Falvaterra,2,2,0.0
+Fara in Sabina,40,28,-30.0
+Farnese,14,10,-28.57
+Ferentino,70,54,-22.86
+Fiamignano,8,5,-37.5
+Fiano Romano,35,33,-5.71
+Filettino,4,3,-25.0
+Fiuggi,25,32,28.0
+Fondi,102,81,-20.59
+Fontana Liri,12,16,33.33
+Fonte Nuova,66,69,4.55
+Fontechiari,10,4,-60.0
+Forano,10,10,0.0
+Frascati,82,55,-32.93
+Frasso Sabino,6,4,-33.33
+Frosinone,140,128,-8.57
+Fumone,7,10,42.86
+Gaeta,65,59,-9.23
+Gallinaro,9,5,-44.44
+Genazzano,12,11,-8.33
+Giuliano di Roma,4,11,175.0
+Gorga,6,2,-66.67
+Gradoli,7,7,0.0
+Graffignano,11,7,-36.36
+Greccio,5,10,100.0
+Grottaferrata,76,57,-25.0
+Grotte di Castro,9,10,11.11
+Guarcino,7,4,-42.86
+Ischia di Castro,12,5,-58.33
+Itri,20,24,20.0
+Jenne,0,1,inf
+Labro,6,1,-83.33
+Lanuvio,35,36,2.86
+Lariano,35,36,2.86
+Latera,6,7,16.67
+Latina,328,306,-6.71
+Lenola,10,10,0.0
+Leonessa,9,8,-11.11
+Licenza,5,5,0.0
+Longone Sabino,6,3,-50.0
+Lubriano,3,4,33.33
+Maenza,5,8,60.0
+Magliano Sabina,18,17,-5.56
+Mandela,6,5,-16.67
+Marcellina,16,17,6.25
+Marcetelli,1,0,-100.0
+Marino,105,107,1.9
+Marta,10,12,20.0
+Mazzano Romano,14,12,-14.29
+Mentana,51,43,-15.69
+Micigliano,0,1,inf
+Minturno,59,61,3.39
+Mompeo,0,0,
+Montalto di Castro,13,24,84.62
+Montasola,0,0,
+Monte Compatri,28,23,-17.86
+Monte Porzio Catone,18,26,44.44
 Monte Romano,10,10,0.0
-Norma,17,15,-11.76
-Piedimonte San Germano,12,23,91.67
-Rignano Flaminio,30,25,-16.67
+Monte San Biagio,25,16,-36.0
+Monte San Giovanni in Sabina,5,2,-60.0
+Montebuono,2,2,0.0
+Montelanico,7,7,0.0
+Monteleone Sabino,6,4,-33.33
+Montenero Sabino,1,0,-100.0
+Montopoli di Sabina,9,12,33.33
+Montorio Romano,6,5,-16.67
+Morlupo,16,21,31.25
+Morro Reatino,6,0,-100.0
+Nazzano,8,3,-62.5
+Nemi,3,6,100.0
+Nepi,25,36,44.0
+Nespolo,1,0,-100.0
+Nettuno,127,124,-2.36
+Norma,17,14,-17.65
+Onano,3,6,100.0
+Oriolo Romano,5,13,160.0
+Orvinio,2,2,0.0
+Paganico Sabino,1,0,-100.0
+Paliano,25,18,-28.0
+Percile,1,0,-100.0
+Pescorocchiano,13,8,-38.46
+Pescosolido,5,6,20.0
+Petrella Salto,4,5,25.0
+Piansano,8,6,-25.0
+Picinisco,9,4,-55.56
+Piedimonte San Germano,13,24,84.62
+Piglio,15,16,6.67
+Pignataro Interamna,7,7,0.0
+Pisoniano,2,1,-50.0
+Pofi,19,16,-15.79
+Poggio Bustone,8,5,-37.5
+Poggio Mirteto,22,18,-18.18
+Poggio Nativo,7,8,14.29
+Poggio San Lorenzo,2,1,-50.0
+Poli,11,7,-36.36
+Pomezia,131,127,-3.05
+Ponza,9,7,-22.22
+Ponzano Romano,3,4,33.33
+Posta,6,1,-83.33
+Posta Fibreno,8,4,-50.0
+Pozzaglia Sabina,3,5,66.67
+Priverno,35,33,-5.71
+Proceno,2,1,-50.0
+Prossedi,7,5,-28.57
+Rignano Flaminio,30,23,-23.33
+Riofreddo,0,0,
+Rocca Canterano,1,0,-100.0
+Rocca Massima,3,4,33.33
+Rocca Priora,29,24,-17.24
+Rocca Sinibalda,1,7,600.0
+Rocca d'Arce,4,7,75.0
+Rocca di Cave,1,0,-100.0
+Rocca di Papa,45,29,-35.56
+Roccagiovine,0,1,inf
+Roccagorga,12,18,50.0
+Roccantica,2,0,-100.0
+Roccasecca,28,23,-17.86
+Roiate,2,4,100.0
+Roma,8178,7176,-12.25
+Ronciglione,34,30,-11.76
+Roviano,8,7,-12.5
+Sabaudia,57,39,-31.58
+Salisano,3,1,-66.67
+San Cesareo,23,25,8.7
+San Donato Val di Comino,9,15,66.67
+San Giorgio a Liri,11,8,-27.27
+San Giovanni Incarico,16,10,-37.5
+San Lorenzo Nuovo,8,14,75.0
+San Polo dei Cavalieri,5,11,120.0
+San Vito Romano,13,8,-38.46
+San Vittore del Lazio,4,10,150.0
+Sant'Ambrogio sul Garigliano,4,6,50.0
+Sant'Andrea del Garigliano,4,5,25.0
+Sant'Angelo Romano,18,13,-27.78
+Sant'Apollinare,9,7,-22.22
+Sant'Elia Fiumerapido,20,18,-10.0
+Santa Marinella,47,54,14.89
+Santopadre,6,8,33.33
+Saracinesco,1,0,-100.0
+Scandriglia,13,11,-15.38
+Segni,32,31,-3.12
+Selci,6,2,-66.67
+Sermoneta,16,18,12.5
 Serrone,5,12,140.0
+Settefrati,4,4,0.0
+Sgurgola,13,6,-53.85
+Sonnino,26,22,-15.38
+Soriano nel Cimino,28,29,3.57
+Sperlonga,10,9,-10.0
+Spigno Saturnia,10,6,-40.0
+Stimigliano,6,6,0.0
+Strangolagalli,9,8,-11.11
+Supino,10,14,40.0
+Tarquinia,37,63,70.27
+Terracina,137,129,-5.84
+Tessennano,2,2,0.0
+Tivoli,183,158,-13.66
+Toffia,3,2,-33.33
+Tolfa,17,15,-11.76
+Torre Cajetani,9,3,-66.67
+Torricella in Sabina,5,8,60.0
+Torrita Tiberina,1,2,100.0
+Trevi nel Lazio,4,6,50.0
+Trevignano Romano,18,19,5.56
+Trivigliano,8,8,0.0
+Turania,0,2,inf
+Tuscania,38,32,-15.79
+Vacone,1,0,-100.0
+Valentano,10,6,-40.0
+Vallecorsa,8,13,62.5
+Vallepietra,2,1,-50.0
+Vallerano,8,7,-12.5
+Vallerotonda,4,6,50.0
+Vallinfreda,2,0,-100.0
+Varco Sabino,1,1,0.0
+Vasanello,10,15,50.0
+Vejano,15,7,-53.33
+Ventotene,1,1,0.0
+Veroli,65,64,-1.54
+Vetralla,52,42,-19.23
+Vicalvi,2,2,0.0
+Vico nel Lazio,3,7,133.33
+Vicovaro,12,12,0.0
+Villa San Giovanni in Tuscia,2,4,100.0
+Villa Santa Lucia,5,5,0.0
+Villa Santo Stefano,8,7,-12.5
+Viterbo,199,208,4.52
+Viticuso,4,4,0.0
+Vitorchiano,17,10,-41.18
+Vivaro Romano,2,0,-100.0

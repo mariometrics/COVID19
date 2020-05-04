@@ -7,10 +7,10 @@ import mplleaflet
 import os
 
 #============================================= LOAD DATA =====================================================
-df = pd.read_csv('comune_giorno.csv', usecols = ['REG','NOME_REGIONE', 'NOME_PROVINCIA',
-                                                 'NOME_COMUNE', 'GE','TOTALE_15','TOTALE_16',
-                                                 'TOTALE_17','TOTALE_18',
-                                                 'TOTALE_19','TOTALE_20'])
+df = pd.read_csv('comuni_giornaliero.csv', usecols = ['REG','NOME_REGIONE', 'NOME_PROVINCIA',
+                                                 'NOME_COMUNE', 'GE','T_15','T_16',
+                                                 'T_17','T_18',
+                                                 'T_19','T_20'])
 
 n_comuni_prov = pd.read_csv('com_prov.csv', index_col = 'Provincia') # source: https://www.tuttitalia.it/province/numero-comuni/ len=107
 n_comuni_reg = pd.read_csv('com_reg.csv', index_col = 'Regione') # source: https://www.tuttitalia.it/regioni/numero-comuni/
@@ -21,7 +21,25 @@ df.loc[df['NOME_REGIONE'] == "Valle d'Aosta/Valle d'Aoste",'NOME_REGIONE'] = "Va
 df.loc[df['NOME_REGIONE'] == "Trentino-Alto Adige/Sdtirol",'NOME_REGIONE'] = "Trentino-Alto Adige"
 
 # ISTAT use '9999' instead of NaN so change and delete
-df = df[df.TOTALE_20 != 9999]
+#df = df[df.T_20 != 9999]
+df = df[df.T_20 != "n.d."]
+df.T_20 = df.T_20.astype("int64")
+
+# 6866 municipalities but only for the first quarter of 2020, 4433 until Apr 15
+# coiche what you want analyze: 
+# if the string until is set on 'Apr 15' --> you will see the analysis of the municipalities until Apr 15
+# set 'Mar 31' for the analysis until March 31 but for more municipalities:
+print("Which analysis do you want to see?")
+print("You have two options:\n-- Type 1 and analyze 4243/7904 municipalities from Jan, 1 to Apr, 15.\n-- Type 2 and analyze 6854/7904 municipalities... but from Jan, 1 to March, 31.")
+choice = int(input("Make your choice (i.e. enter 1 or 2): "))
+if choice == 1:
+    until = 'Apr 15'     
+    com_latest = df[df.GE > 331] 
+    com_latest_name = com_latest['NOME_COMUNE'].unique()
+    df = df[df['NOME_COMUNE'].isin(com_latest_name)]
+else:
+    until = 'March 31' 
+    df = df[df.GE <= 331]
 
 reg = df['NOME_REGIONE'].unique()
 n_reg = 20
@@ -45,7 +63,7 @@ for i in range(len(it['GE'])):
 
 
 it['Giorni'] = date
-it = it.set_index(['Giorni']).drop('GE',axis=1)        
+it = it.set_index(['Giorni']).drop('GE',axis=1) 
 it.columns = ['2015','2016','2017','2018','2019','2020']
 
 it.drop('02-29',inplace=True)
@@ -73,7 +91,7 @@ var_tot_it_19_20 = (it_2020.loc[t:].sum()-it_2019.loc[t:].sum())/it_2019.loc[t:]
 
 ## stuff for plot 
 legend_it = ['Min Daily Deceases 15-19 Italy', 'Max Daily Deceases 15-19 Italy', "Deceases 2020 Italy", "Firsts Confirmed Cases Italy"]
-note_it = "Notes:\nANPR Municipalities: {} over {} = {:6.2f}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni_anpr_tot,n_comuni_tot,(n_comuni_anpr_tot/n_comuni_tot)*100,data_diff_max_it,n_giorni_var_it,var_tot_it_19_20,var_tot_it)
+note_it = "Notes:\nANPR Municipalities: {} over {} = {:6.2f}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to {}: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to {}: {:+6.2f}%".format(n_comuni_anpr_tot,n_comuni_tot,(n_comuni_anpr_tot/n_comuni_tot)*100,data_diff_max_it,n_giorni_var_it,until,var_tot_it_19_20,until,var_tot_it)
 
 #### PLOT ####
 
@@ -147,7 +165,7 @@ for r in reg:
     regions["{}".format(r)] = df.loc[df['NOME_REGIONE'] == r] # select regions
     
     # Analyze cities in regions
-    Dettaglio_comuni[r] = regions[r].groupby('NOME_COMUNE').aggregate({'TOTALE_19':np.sum,'TOTALE_20':np.sum})
+    Dettaglio_comuni[r] = regions[r].groupby('NOME_COMUNE').aggregate({'T_19':np.sum,'T_20':np.sum})
     Dettaglio_comuni[r] = Dettaglio_comuni[r].reset_index()
     Dettaglio_comuni[r].columns = ['Comune','2019','2020']
     Dettaglio_comuni[r]['Variazione %'] = round((Dettaglio_comuni[r]['2020']/Dettaglio_comuni[r]['2019']-1)*100, 2)
@@ -165,7 +183,7 @@ for r in reg:
         Dettaglio_comuni[r].to_csv(filepath, header=True, index=False, sep=',')    
         
         # now start to analyze regions 
-        regions[r] = regions[r].groupby('GE').aggregate({'TOTALE_15':np.sum, 'TOTALE_16':np.sum, 'TOTALE_17':np.sum, 'TOTALE_18':np.sum, 'TOTALE_19':np.sum, 'TOTALE_20':np.sum})
+        regions[r] = regions[r].groupby('GE').aggregate({'T_15':np.sum, 'T_16':np.sum, 'T_17':np.sum, 'T_18':np.sum, 'T_19':np.sum, 'T_20':np.sum})
         regions[r] = regions[r].reset_index()#.drop('GE',axis=1)
 
         # create index
@@ -209,7 +227,7 @@ for r in reg:
 
         ## stuff for plot 
         legend[r] = ['Min Daily Deceases 15-19 {}'.format(r), 'Max Daily Deceases 15-19 {}'.format(r), "Deceases 2020 {}".format(r), "Firsts Confirmed Cases Italy"]
-        note[r] = "Notes:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[r],n_comuni_reg['N_comuni'].loc[r],perc[r],data_diff_max[r],n_giorni_var[r],var_tot_19_20[r],var_tot_reg_max_2020[r])
+        note[r] = "Notes:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to {}: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to {}: {:+6.2f}%".format(n_comuni[r],n_comuni_reg['N_comuni'].loc[r],perc[r],data_diff_max[r],n_giorni_var[r],until,var_tot_19_20[r],until,var_tot_reg_max_2020[r])
 
         #### PLOT ####
         
@@ -284,7 +302,7 @@ for p in prov:
     provinces["{}".format(p)] = df.loc[df['NOME_PROVINCIA'] == p] # select provinces
     
     # Analyze cities in provinces
-    Dettaglio_comuni[p] = provinces[p].groupby('NOME_COMUNE').aggregate({'TOTALE_19':np.sum,'TOTALE_20':np.sum})
+    Dettaglio_comuni[p] = provinces[p].groupby('NOME_COMUNE').aggregate({'T_19':np.sum,'T_20':np.sum})
     Dettaglio_comuni[p] = Dettaglio_comuni[p].reset_index()
     Dettaglio_comuni[p].columns = ['Comune','2019','2020']
     Dettaglio_comuni[p]['Variazione %'] = round((Dettaglio_comuni[p]['2020']/Dettaglio_comuni[p]['2019']-1)*100, 2)
@@ -302,7 +320,7 @@ for p in prov:
         Dettaglio_comuni[p].to_csv(filepath, header=True, index=False, sep=',')    
         
         # now start to analyze provices 
-        provinces[p] = provinces[p].groupby('GE').aggregate({'TOTALE_15':np.sum, 'TOTALE_16':np.sum, 'TOTALE_17':np.sum, 'TOTALE_18':np.sum, 'TOTALE_19':np.sum, 'TOTALE_20':np.sum})
+        provinces[p] = provinces[p].groupby('GE').aggregate({'T_15':np.sum, 'T_16':np.sum, 'T_17':np.sum, 'T_18':np.sum, 'T_19':np.sum, 'T_20':np.sum})
         provinces[p] = provinces[p].reset_index()#.drop('GE',axis=1)
 
         # create index
@@ -344,7 +362,7 @@ for p in prov:
 
         ## stuff for plot 
         legend[p] = ['Min Daily Deceases 15-19 {}'.format(p), 'Max Daily Deceases 15-19 {}'.format(p), "Deceases 2020 {}".format(p), "Firsts Confirmed Cases Italy"]
-        note[p] = "Note:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to Apr 4: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to Apr 4: {:+6.2f}%".format(n_comuni[p],n_comuni_prov['N_comuni'].loc[p],perc[p],data_diff_max[p],n_giorni_var[p],var_tot_19_20[p],var_tot_prov_max_2020[p])
+        note[p] = "Note:\nANPR Municipalities: {} over {} = {}% \nApproximated Peak: {} \nN° of  days in which '20 Deceases are at least double of Max Daily Deceases 15-19   : {} \nDeceases % Change 19-20 from Feb 21 to {}: {:+6.2f}% \nDeceases % Change '20 - Max Deceases 15-19 from Feb 21 to {}: {:+6.2f}%".format(n_comuni[p],n_comuni_prov['N_comuni'].loc[p],perc[p],data_diff_max[p],n_giorni_var[p],until,var_tot_19_20[p],until,var_tot_prov_max_2020[p])
 
         #### PLOT ####
         

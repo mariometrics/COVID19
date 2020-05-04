@@ -1,91 +1,230 @@
 Comune,2019,2020,Variazione %
+Abbadia San Salvatore,31,31,0.0
 Abetone Cutigliano,7,11,57.14
-Altopascio,39,43,10.26
-Aulla,44,45,2.27
-Bagno a Ripoli,88,107,21.59
-Bagnone,12,11,-8.33
-Bibbona,24,14,-41.67
-Borgo a Mozzano,35,31,-11.43
-Buggiano,22,30,36.36
+Agliana,41,59,43.9
+Altopascio,38,42,10.53
+Anghiari,23,22,-4.35
+Arezzo,357,304,-14.85
+Asciano,25,19,-24.0
+Aulla,45,44,-2.22
+Bagni di Lucca,25,22,-12.0
+Bagno a Ripoli,87,101,16.09
+Bagnone,14,11,-21.43
+Barberino Tavarnelle,39,37,-5.13
+Barberino di Mugello,29,25,-13.79
+Bibbiena,42,31,-26.19
+Bibbona,20,14,-30.0
+Bientina,25,17,-32.0
+Borgo San Lorenzo,53,50,-5.66
+Borgo a Mozzano,35,30,-14.29
+Bucine,28,33,17.86
+Buggiano,19,31,63.16
+Buonconvento,13,15,15.38
 Buti,19,18,-5.26
-Calci,17,20,17.65
-Calcinaia,30,30,0.0
-Camaiore,107,125,16.82
-Campagnatico,13,11,-15.38
+Calci,15,20,33.33
+Calcinaia,27,26,-3.7
+Calenzano,60,53,-11.67
+Camaiore,99,119,20.2
+Campagnatico,11,11,0.0
+Campi Bisenzio,126,109,-13.49
+Campiglia Marittima,51,41,-19.61
+Campo nell'Elba,26,10,-61.54
+Camporgiano,7,6,-14.29
+Cantagallo,4,8,100.0
+Capalbio,14,9,-35.71
 Capannoli,13,19,46.15
-Capoliveri,8,13,62.5
-Capraia e Limite,22,28,27.27
-Carrara,211,237,12.32
-Casciana Terme Lari,57,57,0.0
-Cascina,138,135,-2.17
-Casole d'Elsa,14,14,0.0
-Castelfranco Piandisc,39,30,-23.08
+Capannori,125,154,23.2
+Capoliveri,8,11,37.5
+Capolona,21,14,-33.33
+Capraia Isola,1,0,-100.0
+Capraia e Limite,23,27,17.39
+Caprese Michelangelo,6,8,33.33
+Careggine,1,5,400.0
+Carmignano,32,30,-6.25
+Carrara,207,231,11.59
+Casale Marittimo,3,4,33.33
+Casciana Terme Lari,55,56,1.82
+Cascina,136,129,-5.15
+Casola in Lunigiana,7,4,-42.86
+Casole d'Elsa,15,13,-13.33
+Castagneto Carducci,22,39,77.27
+Castel Focognano,14,8,-42.86
+Castel San Niccol,10,20,100.0
+Castelfiorentino,61,46,-24.59
+Castelfranco di Sotto,41,34,-17.07
 Castell'Azzara,6,11,83.33
-Castellina in Chianti,9,23,155.56
-Castelnuovo Berardenga,29,20,-31.03
+Castellina in Chianti,10,23,130.0
+Castelnuovo Berardenga,30,19,-36.67
 Castelnuovo di Val di Cecina,5,10,100.0
-Castiglion Fiorentino,34,54,58.82
-Castiglione della Pescaia,34,28,-17.65
-Castiglione di Garfagnana,8,10,25.0
-Certaldo,61,55,-9.84
-Chiesina Uzzanese,22,18,-18.18
-Chiusi,38,32,-15.79
-Civitella Paganico,10,15,50.0
-Collesalvetti,51,60,17.65
-Crespina Lorenzana,21,16,-23.81
-Figline e Incisa Valdarno,79,71,-10.13
-Filattiera,7,11,57.14
-Fivizzano,47,45,-4.26
-Follonica,66,81,22.73
-Fucecchio,72,84,16.67
-Gaiole in Chianti,10,10,0.0
-Gavorrano,35,39,11.43
-Greve in Chianti,42,48,14.29
-Grosseto,267,266,-0.37
-Impruneta,52,48,-7.69
-Lamporecchio,17,31,82.35
+Castiglion Fibocchi,6,7,16.67
+Castiglion Fiorentino,35,54,54.29
+Castiglione d'Orcia,11,14,27.27
+Castiglione della Pescaia,32,30,-6.25
+Castiglione di Garfagnana,10,10,0.0
+Cavriglia,36,31,-13.89
+Cerreto Guidi,23,34,47.83
+Certaldo,61,54,-11.48
+Chianciano Terme,39,34,-12.82
+Chiesina Uzzanese,20,18,-10.0
+Chitignano,2,6,200.0
+Chiusi,37,33,-10.81
+Chiusi della Verna,12,7,-41.67
+Cinigiano,14,14,0.0
+Civitella Paganico,11,13,18.18
+Civitella in Val di Chiana,37,22,-40.54
+Colle di Val d'Elsa,59,53,-10.17
+Collesalvetti,49,58,18.37
+Comano,7,3,-57.14
+Crespina Lorenzana,20,15,-25.0
+Empoli,148,137,-7.43
+Fabbriche di Vergemoli,3,6,100.0
+Fauglia,12,12,0.0
+Fiesole,49,44,-10.2
+Figline e Incisa Valdarno,76,69,-9.21
+Firenze,1309,1131,-13.6
+Firenzuola,27,19,-29.63
+Fivizzano,43,42,-2.33
+Foiano della Chiana,26,27,3.85
+Follonica,63,80,26.98
+Forte dei Marmi,30,29,-3.33
+Fosciandora,5,6,20.0
+Fosdinovo,11,23,109.09
+Fucecchio,69,82,18.84
+Gaiole in Chianti,11,10,-9.09
+Gallicano,20,16,-20.0
+Gambassi Terme,16,14,-12.5
+Gavorrano,34,36,5.88
+Greve in Chianti,42,46,9.52
+Grosseto,259,261,0.77
+Guardistallo,5,2,-60.0
+Impruneta,51,46,-9.8
+Isola del Giglio,6,8,33.33
+Lajatico,4,5,25.0
+Lamporecchio,16,30,87.5
+Larciano,20,17,-15.0
+Lastra a Signa,61,47,-22.95
+Laterina Pergine Valdarno,15,27,80.0
+Licciana Nardi,17,16,-5.88
+Livorno,573,569,-0.7
+Londa,8,5,-37.5
 Loro Ciuffenna,22,16,-27.27
-Massa,235,246,4.68
-Minucciano,6,13,116.67
-Monte Argentario,51,48,-5.88
-Monte San Savino,39,32,-17.95
-Montecarlo,12,11,-8.33
-Monteriggioni,23,30,30.43
-Monteroni d'Arbia,34,19,-44.12
-Monterotondo Marittimo,5,10,100.0
-Montopoli in Val d'Arno,31,34,9.68
-Mulazzo,12,16,33.33
-Palaia,16,17,6.25
-Pelago,35,35,0.0
-Pieve Fosciana,8,13,62.5
-Pieve Santo Stefano,12,14,16.67
-Piombino,121,159,31.4
-Pistoia,299,320,7.02
-Pitigliano,16,23,43.75
-Ponsacco,44,36,-18.18
+Lucca,295,285,-3.39
+Magliano in Toscana,14,11,-21.43
+Manciano,25,28,12.0
+Marciana Marina,5,6,20.0
+Marciano della Chiana,9,8,-11.11
+Marradi,11,11,0.0
+Massa,225,234,4.0
+Massa Marittima,34,33,-2.94
+Massa e Cozzile,31,31,0.0
+Massarosa,66,77,16.67
+Minucciano,5,12,140.0
+Molazzana,4,6,50.0
+Monte Argentario,48,46,-4.17
+Monte San Savino,37,31,-16.22
+Montecarlo,11,11,0.0
+Montecatini Val di Cecina,12,9,-25.0
+Montecatini-Terme,74,75,1.35
+Montelupo Fiorentino,43,35,-18.6
+Montemignaio,3,2,-33.33
+Montemurlo,40,50,25.0
+Monterchi,4,6,50.0
+Monteriggioni,21,30,42.86
+Monterotondo Marittimo,5,8,60.0
+Montescudaio,8,8,0.0
+Montespertoli,35,35,0.0
+Montevarchi,91,82,-9.89
+Monteverdi Marittimo,1,4,300.0
+Montieri,5,3,-40.0
+Montopoli in Val d'Arno,28,33,17.86
+Mulazzo,13,15,15.38
+Murlo,12,6,-50.0
+Orbetello,43,47,9.3
+Orciano Pisano,1,0,-100.0
+Ortignano Raggiolo,1,2,100.0
+Palaia,17,17,0.0
+Pelago,34,31,-8.82
+Pescaglia,12,11,-8.33
+Pescia,64,72,12.5
+Piancastagnaio,22,19,-13.64
+Piazza al Serchio,9,8,-11.11
+Pienza,7,5,-28.57
+Pietrasanta,78,89,14.1
+Pieve Fosciana,9,13,44.44
+Pieve Santo Stefano,12,12,0.0
+Pieve a Nievole,28,33,17.86
+Piombino,113,151,33.63
+Pistoia,292,304,4.11
+Pitigliano,16,21,31.25
+Podenzana,9,5,-44.44
+Poggibonsi,93,89,-4.3
+Pomarance,29,18,-37.93
+Ponsacco,43,36,-16.28
+Pontassieve,76,74,-2.63
 Ponte Buggianese,28,26,-7.14
-Pontremoli,29,59,103.45
-Pratovecchio Stia,26,23,-11.54
-Quarrata,55,61,10.91
-Radda in Chianti,3,10,233.33
-Reggello,53,66,24.53
-Rio,15,17,13.33
+Pontedera,94,98,4.26
+Pontremoli,32,57,78.12
+Poppi,20,27,35.0
+Portoferraio,29,27,-6.9
+Prato,549,486,-11.48
+Pratovecchio Stia,22,22,0.0
+Quarrata,53,61,15.09
+Radda in Chianti,3,9,200.0
+Radicofani,3,3,0.0
+Radicondoli,1,5,400.0
+Rapolano Terme,18,11,-38.89
+Reggello,51,64,25.49
+Rignano sull'Arno,36,20,-44.44
+Rio,14,17,21.43
+Riparbella,6,5,-16.67
+Roccalbegna,2,7,250.0
+Roccastrada,29,37,27.59
+Rosignano Marittimo,129,114,-11.63
+Rufina,17,19,11.76
+Sambuca Pistoiese,7,6,-14.29
+San Casciano in Val di Pesa,55,50,-9.09
+San Gimignano,29,25,-13.79
+San Giovanni Valdarno,60,74,23.33
+San Giuliano Terme,96,97,1.04
 San Marcello Piteglio,46,50,8.7
-San Miniato,91,104,14.29
-San Quirico d'Orcia,9,10,11.11
-Santa Croce sull'Arno,49,38,-22.45
-Sarteano,23,21,-8.7
-Scandicci,158,186,17.72
-Seravezza,50,52,4.0
-Serravalle Pistoiese,33,38,15.15
-Signa,44,66,50.0
-Sorano,17,19,11.76
-Sovicille,30,37,23.33
-Stazzema,14,15,7.14
-Subbiano,23,18,-21.74
+San Miniato,89,98,10.11
+San Quirico d'Orcia,7,9,28.57
+San Romano in Garfagnana,7,5,-28.57
+San Vincenzo,26,31,19.23
+Sansepolcro,61,68,11.48
+Santa Croce sull'Arno,48,35,-27.08
+Santa Fiora,12,16,33.33
+Santa Maria a Monte,34,35,2.94
+Sarteano,22,20,-9.09
+Sassetta,1,5,400.0
+Scandicci,149,175,17.45
+Scansano,16,23,43.75
+Scarperia e San Piero,41,33,-19.51
+Seggiano,4,4,0.0
+Semproniano,5,6,20.0
+Seravezza,48,50,4.17
+Serravalle Pistoiese,32,36,12.5
+Sestino,9,3,-66.67
+Sesto Fiorentino,170,152,-10.59
+Signa,42,65,54.76
+Sinalunga,44,46,4.55
+Sorano,17,17,0.0
+Sovicille,33,35,6.06
+Stazzema,14,14,0.0
+Subbiano,22,18,-18.18
+Talla,1,6,500.0
+Terranuova Bracciolini,28,34,21.43
 Terricciola,8,10,25.0
-Vaglia,15,21,40.0
-Vicopisano,20,27,35.0
-Villafranca in Lunigiana,35,23,-34.29
-Vinci,45,46,2.22
-Volterra,52,51,-1.92
+Trequanda,3,3,0.0
+Tresana,8,6,-25.0
+Uzzano,10,17,70.0
+Vagli Sotto,5,4,-20.0
+Vaglia,15,22,46.67
+Vecchiano,41,41,0.0
+Viareggio,209,219,4.78
+Vicopisano,21,27,28.57
+Villa Basilica,7,9,28.57
+Villa Collemandina,5,4,-20.0
+Villafranca in Lunigiana,31,23,-25.81
+Vinci,43,45,4.65
+Volterra,51,50,-1.96

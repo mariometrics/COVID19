@@ -1,34 +1,430 @@
 Comune,2019,2020,Variazione %
-Apollosa,6,17,183.33
-Atripalda,26,31,19.23
-Casavatore,53,47,-11.32
-Ceppaloni,8,11,37.5
-Cerreto Sannita,22,10,-54.55
-Cimitile,20,27,35.0
-Flumeri,8,12,50.0
-Gragnano,72,77,6.94
-Grumo Nevano,39,46,17.95
-Guardia Lombardi,9,14,55.56
-Lusciano,29,42,44.83
-Manocalzati,8,12,50.0
-Massa di Somma,12,17,41.67
-Montecorvino Pugliano,23,22,-4.35
-Montella,28,30,7.14
+Acerno,10,11,10.0
+Acerra,109,107,-1.83
+Afragola,173,152,-12.14
+Agerola,27,29,7.41
+Agropoli,52,56,7.69
+Aiello del Sabato,10,7,-30.0
+Ailano,3,4,33.33
+Airola,37,18,-51.35
+Alfano,5,7,40.0
+Altavilla Irpina,15,13,-13.33
+Altavilla Silentina,27,27,0.0
+Alvignano,20,20,0.0
+Amalfi,21,18,-14.29
+Amorosi,15,10,-33.33
+Anacapri,22,17,-22.73
+Andretta,10,8,-20.0
+Angri,83,74,-10.84
+Apice,16,15,-6.25
+Apollosa,6,16,166.67
+Aquara,11,7,-36.36
+Aquilonia,5,14,180.0
+Ariano Irpino,90,78,-13.33
+Arienzo,21,9,-57.14
+Arpaia,2,5,150.0
+Arpaise,2,5,150.0
+Arzano,73,56,-23.29
+Atena Lucana,8,7,-12.5
+Atrani,2,2,0.0
+Atripalda,25,28,12.0
+Auletta,10,7,-30.0
+Avella,22,16,-27.27
+Avellino,185,162,-12.43
+Bacoli,96,64,-33.33
+Bagnoli Irpino,13,10,-23.08
+Baia e Latina,5,12,140.0
+Baiano,13,11,-15.38
+Baronissi,45,41,-8.89
+Battipaglia,145,135,-6.9
+Bellosguardo,3,4,33.33
+Benevento,208,201,-3.37
+Bisaccia,7,21,200.0
+Bonea,4,4,0.0
+Bonito,12,10,-16.67
+Boscoreale,71,56,-21.13
+Brusciano,20,37,85.0
+Bucciano,9,6,-33.33
+Buccino,25,19,-24.0
+Buonabitacolo,6,13,116.67
+Caggiano,13,9,-30.77
+Caianello,5,7,40.0
+Caiazzo,22,19,-13.64
+Cairano,0,1,inf
+Calabritto,13,11,-15.38
+Calvanico,4,5,25.0
+Calvi,8,6,-25.0
+Campagna,51,49,-3.92
+Campolattaro,4,4,0.0
+Campoli del Monte Taburno,6,1,-83.33
+Campora,4,1,-75.0
+Camposano,13,15,15.38
+Capaccio Paestum,52,45,-13.46
+Capodrise,25,17,-32.0
+Capriati a Volturno,5,8,60.0
+Capriglia Irpina,9,9,0.0
+Capua,58,53,-8.62
+Carbonara di Nola,8,4,-50.0
+Cardito,50,53,6.0
+Casagiove,35,35,0.0
+Casal Velino,16,15,-6.25
+Casal di Principe,47,42,-10.64
+Casalbore,8,11,37.5
+Casalbuono,4,3,-25.0
+Casalduni,4,4,0.0
+Casaletto Spartano,4,5,25.0
+Casalnuovo di Napoli,101,100,-0.99
+Casaluce,22,22,0.0
+Casamarciano,14,8,-42.86
+Casandrino,24,20,-16.67
+Casapesenna,13,14,7.69
+Casapulla,22,18,-18.18
+Casavatore,51,50,-1.96
+Caselle in Pittari,6,6,0.0
+Caserta,204,209,2.45
+Casola di Napoli,7,7,0.0
+Cassano Irpino,1,2,100.0
+Castel Baronia,5,3,-40.0
+Castel Campagnano,4,3,-25.0
+Castel Morrone,16,11,-31.25
+Castel San Giorgio,37,34,-8.11
+Castel San Lorenzo,7,10,42.86
+Castel Volturno,50,56,12.0
+Castel di Sasso,1,1,0.0
+Castelcivita,10,11,10.0
+Castelfranci,9,9,0.0
+Castelfranco in Miscano,1,3,200.0
+Castellabate,30,28,-6.67
+Castellammare di Stabia,189,203,7.41
+Castello di Cisterna,14,12,-14.29
+Castelnuovo Cilento,5,7,40.0
+Castelnuovo di Conza,2,6,200.0
+Castelpoto,0,4,inf
+Castelvenere,7,8,14.29
+Castelvetere in Val Fortore,9,6,-33.33
+Castelvetere sul Calore,11,6,-45.45
+Castiglione del Genovesi,3,1,-66.67
+Cautano,12,10,-16.67
+Celle di Bulgheria,10,7,-30.0
+Cellole,21,18,-14.29
+Centola,21,17,-19.05
+Ceppaloni,6,10,66.67
+Ceraso,5,9,80.0
+Cercola,35,36,2.86
+Cervinara,29,27,-6.9
+Cervino,15,16,6.67
+Cesa,14,16,14.29
+Cesinali,7,6,-14.29
+Cetara,4,7,75.0
+Chianche,3,4,33.33
+Chiusano di San Domenico,5,6,20.0
+Cimitile,19,27,42.11
+Ciorlano,0,2,inf
+Circello,10,8,-20.0
+Colle Sannita,6,6,0.0
+Colliano,19,11,-42.11
+Comiziano,3,5,66.67
+Contrada,11,8,-27.27
+Controne,5,2,-60.0
+Contursi Terme,8,8,0.0
+Conza della Campania,8,6,-25.0
+Corbara,3,8,166.67
+Corleto Monforte,2,1,-50.0
+Cuccaro Vetere,2,1,-50.0
+Curti,32,21,-34.38
+Domicella,4,4,0.0
+Dragoni,5,7,40.0
+Dugenta,14,5,-64.29
+Durazzano,6,8,33.33
+Eboli,105,100,-4.76
+Faicchio,13,13,0.0
+Falciano del Massico,14,13,-7.14
+Felitto,8,4,-50.0
+Fisciano,39,31,-20.51
+Flumeri,8,13,62.5
+Foiano di Val Fortore,9,7,-22.22
+Fontanarosa,19,13,-31.58
+Fontegreca,3,2,-33.33
+Forchia,1,4,300.0
+Forino,15,15,0.0
+Forio,58,34,-41.38
+Formicola,7,6,-14.29
+Fragneto Monforte,8,6,-25.0
+Fragneto l'Abate,7,5,-28.57
+Frattaminore,31,32,3.23
+Frigento,16,12,-25.0
+Furore,1,1,0.0
+Futani,5,4,-20.0
+Gallo Matese,3,0,-100.0
+Giano Vetusto,8,4,-50.0
+Giffoni Sei Casali,16,16,0.0
+Giffoni Valle Piana,25,37,48.0
+Ginestra degli Schiavoni,3,2,-33.33
+Gioi,7,8,14.29
+Giugliano in Campania,201,185,-7.96
+Gragnano,67,74,10.45
+Grazzanise,24,17,-29.17
+Greci,11,4,-63.64
+Gricignano di Aversa,22,17,-22.73
+Grottaminarda,33,28,-15.15
+Grottolella,6,3,-50.0
+Grumo Nevano,39,44,12.82
+Guardia Lombardi,9,12,33.33
+Ispani,3,4,33.33
+Lacco Ameno,11,9,-18.18
+Lapio,7,6,-14.29
+Laureana Cilento,6,7,16.67
+Laurino,7,5,-28.57
+Lauro,11,10,-9.09
+Letino,4,4,0.0
+Lettere,14,15,7.14
+Liberi,4,3,-25.0
+Limatola,5,15,200.0
+Lioni,21,19,-9.52
+Liveri,3,4,33.33
+Lusciano,27,41,51.85
+Lustra,5,5,0.0
+Macerata Campania,21,27,28.57
+Magliano Vetere,3,7,133.33
+Maiori,10,23,130.0
+Manocalzati,8,11,37.5
+Marano di Napoli,142,125,-11.97
+Marigliano,85,61,-28.24
+Marzano Appio,8,6,-25.0
+Marzano di Nola,5,9,80.0
+Massa di Somma,10,17,70.0
+Melizzano,4,6,50.0
+Mercato San Severino,66,63,-4.55
+Mercogliano,31,24,-22.58
+Mignano Monte Lungo,12,7,-41.67
+Minori,6,7,16.67
+Mirabella Eclano,25,31,24.0
+Moio della Civitella,7,10,42.86
+Molinara,7,9,28.57
+Mondragone,82,80,-2.44
+Montaguto,3,3,0.0
+Montano Antilia,11,11,0.0
+Monte San Giacomo,2,6,200.0
+Montecalvo Irpino,11,14,27.27
+Montecorice,7,5,-28.57
+Montecorvino Pugliano,24,23,-4.17
+Montecorvino Rovella,34,32,-5.88
+Monteforte Cilento,2,1,-50.0
+Monteforte Irpino,25,19,-24.0
+Montefredane,6,10,66.67
+Montefusco,2,4,100.0
+Montella,30,33,10.0
+Montemiletto,11,17,54.55
+Montesarchio,28,25,-10.71
+Monteverde,1,5,400.0
+Morcone,20,17,-15.0
+Morigerati,6,5,-16.67
+Morra De Sanctis,7,6,-14.29
+Moschiano,4,5,25.0
+Mugnano del Cardinale,11,17,54.55
+Mugnano di Napoli,76,78,2.63
+Napoli,2990,2764,-7.56
+Nocera Superiore,65,58,-10.77
+Nola,72,77,6.94
+Novi Velia,4,6,50.0
+Nusco,14,15,7.14
+Ogliastro Cilento,8,9,12.5
+Olevano sul Tusciano,23,25,8.7
 Oliveto Citra,11,17,54.55
-Padula,16,26,62.5
-Pellezzano,23,17,-26.09
-Pietrelcina,10,13,30.0
-Pontecagnano Faiano,73,77,5.48
-Pontelandolfo,9,11,22.22
-San Lorenzo Maggiore,3,12,300.0
-San Marco dei Cavoti,17,11,-35.29
-San Sebastiano al Vesuvio,25,19,-24.0
-Sant'Antonio Abate,48,51,6.25
-Sant'Arsenio,11,12,9.09
-Serino,18,27,50.0
+Omignano,4,8,100.0
+Orria,9,4,-55.56
+Orta di Atella,22,26,18.18
+Ospedaletto d'Alpinolo,4,4,0.0
+Ottati,2,0,-100.0
+Ottaviano,63,48,-23.81
+Padula,19,27,42.11
+Paduli,11,13,18.18
+Pagani,80,81,1.25
+Pago Veiano,11,15,36.36
+Palma Campania,43,42,-2.33
+Paolisi,3,10,233.33
+Parete,26,26,0.0
+Parolise,2,2,0.0
+Pastorano,13,9,-30.77
+Paternopoli,6,13,116.67
+Paupisi,9,5,-44.44
+Perdifumo,5,9,80.0
+Perito,2,4,100.0
+Pertosa,2,0,-100.0
+Pesco Sannita,6,7,16.67
+Petina,5,4,-20.0
+Petruro Irpino,1,1,0.0
+Piaggine,5,6,20.0
+Piana di Monte Verna,13,7,-46.15
+Piano di Sorrento,32,40,25.0
+Pietramelara,12,17,41.67
+Pietraroja,3,2,-33.33
+Pietrastornina,5,6,20.0
+Pietravairano,8,7,-12.5
+Pietrelcina,10,12,20.0
+Pimonte,14,10,-28.57
+Poggiomarino,42,42,0.0
+Pollena Trocchia,28,24,-14.29
+Pomigliano d'Arco,90,96,6.67
+Pompei,56,58,3.57
+Ponte,9,9,0.0
+Pontecagnano Faiano,71,75,5.63
+Pontelandolfo,10,11,10.0
+Pontelatone,3,3,0.0
+Portici,184,172,-6.52
+Portico di Caserta,20,11,-45.0
+Positano,13,10,-23.08
+Postiglione,12,9,-25.0
+Pozzuoli,189,185,-2.12
+Prata di Principato Ultra,10,10,0.0
+Pratola Serra,10,11,10.0
+Presenzano,2,6,200.0
+Prignano Cilento,5,2,-60.0
+Procida,32,28,-12.5
+Puglianello,6,4,-33.33
+Quadrelle,4,7,75.0
+Qualiano,65,46,-29.23
+Quarto,57,63,10.53
+Quindici,10,7,-30.0
+Ravello,6,8,33.33
+Raviscanina,3,4,33.33
+Recale,17,23,35.29
+Reino,5,3,-40.0
+Riardo,9,5,-44.44
+Rocca d'Evandro,12,10,-16.67
+Roccabascerana,9,6,-33.33
+Roccadaspide,35,24,-31.43
+Roccapiemonte,27,26,-3.7
+Roccaromana,4,4,0.0
+Rocchetta e Croce,4,4,0.0
+Rofrano,6,6,0.0
+Romagnano al Monte,2,2,0.0
+Roscigno,5,3,-40.0
+Rotondi,10,9,-10.0
+Ruviano,7,9,28.57
+Sacco,5,2,-60.0
+Salerno,548,469,-14.42
+Salza Irpina,5,2,-60.0
+San Bartolomeo in Galdo,15,19,26.67
+San Cipriano Picentino,17,19,11.76
+San Cipriano d'Aversa,37,37,0.0
+San Gennaro Vesuviano,29,25,-13.79
+San Giorgio La Molara,12,5,-58.33
+San Giorgio del Sannio,41,24,-41.46
+San Giovanni a Piro,13,12,-7.69
+San Gregorio Matese,1,2,100.0
+San Leucio del Sannio,12,9,-25.0
+San Lorenzello,12,7,-41.67
+San Lorenzo Maggiore,3,10,233.33
+San Lupo,6,4,-33.33
+San Mango Piemonte,9,6,-33.33
+San Mango sul Calore,4,4,0.0
+San Marcellino,32,29,-9.38
+San Marco Evangelista,11,12,9.09
+San Martino Sannita,3,4,33.33
+San Martino Valle Caudina,11,10,-9.09
+San Mauro Cilento,6,4,-33.33
+San Mauro la Bruca,2,3,50.0
+San Michele di Serino,5,5,0.0
+San Nazzaro,2,3,50.0
+San Nicola Baronia,0,3,inf
+San Nicola Manfredi,11,7,-36.36
+San Nicola la Strada,56,46,-17.86
+San Pietro Infine,3,2,-33.33
+San Pietro al Tanagro,8,4,-50.0
+San Potito Sannitico,4,10,150.0
+San Potito Ultra,5,7,40.0
+San Prisco,20,36,80.0
+San Sebastiano al Vesuvio,24,19,-20.83
+San Sossio Baronia,4,6,50.0
+San Valentino Torio,20,22,10.0
+San Vitaliano,14,16,14.29
+Sant'Agnello,23,22,-4.35
+Sant'Andrea di Conza,13,11,-15.38
+Sant'Angelo a Cupolo,11,9,-18.18
+Sant'Angelo a Fasanella,7,6,-14.29
+Sant'Angelo a Scala,2,4,100.0
+Sant'Angelo all'Esca,0,1,inf
+Sant'Angelo d'Alife,13,6,-53.85
+Sant'Angelo dei Lombardi,21,16,-23.81
+Sant'Antimo,66,66,0.0
+Sant'Antonio Abate,47,51,8.51
+Sant'Arcangelo Trimonte,5,1,-80.0
+Sant'Arpino,29,31,6.9
+Sant'Arsenio,12,12,0.0
+Sant'Egidio del Monte Albino,21,19,-9.52
+Santa Croce del Sannio,4,3,-25.0
+Santa Lucia di Serino,6,3,-50.0
+Santa Maria Capua Vetere,89,84,-5.62
+Santa Marina,11,9,-18.18
+Santa Paolina,9,3,-66.67
+Santo Stefano del Sole,4,3,-25.0
+Santomenna,2,2,0.0
+Sanza,8,8,0.0
+Sapri,26,22,-15.38
+Sarno,98,67,-31.63
+Sassano,24,21,-12.5
+Sassinoro,3,0,-100.0
+Scafati,114,110,-3.51
+Scala,2,2,0.0
+Scisciano,10,13,30.0
+Senerchia,5,3,-40.0
+Serino,19,31,63.16
+Serramezzana,1,0,-100.0
+Serrara Fontana,11,7,-36.36
 Serre,15,12,-20.0
-Sicignano degli Alburni,10,13,30.0
+Sicignano degli Alburni,12,12,0.0
+Sirignano,6,4,-33.33
+Solofra,31,34,9.68
+Solopaca,22,18,-18.18
+Somma Vesuviana,82,80,-2.44
+Sorbo Serpico,1,3,200.0
+Sorrento,46,38,-17.39
 Sperone,6,13,116.67
-Teggiano,38,34,-10.53
-Torella dei Lombardi,13,11,-15.38
+Stella Cilento,1,2,100.0
+Stio,7,6,-14.29
+Succivo,17,14,-17.65
+Summonte,3,3,0.0
+Taurano,3,4,33.33
+Taurasi,7,8,14.29
+Teano,40,36,-10.0
+Teggiano,42,34,-19.05
+Telese Terme,19,24,26.32
+Teora,6,4,-33.33
+Terzigno,49,34,-30.61
+Teverola,33,25,-24.24
+Tocco Caudio,7,8,14.29
+Tora e Piccilli,1,7,600.0
+Torchiara,6,8,33.33
+Torella dei Lombardi,15,11,-26.67
+Torraca,2,2,0.0
+Torre Annunziata,127,106,-16.54
+Torre Le Nocelle,6,6,0.0
+Torre del Greco,233,249,6.87
+Torrecuso,15,12,-20.0
+Torrioni,5,2,-60.0
+Tortorella,6,2,-66.67
+Trecase,30,26,-13.33
+Trentinara,8,5,-37.5
+Trentola Ducenta,47,33,-29.79
+Trevico,2,7,250.0
+Tufino,8,17,112.5
+Tufo,4,5,25.0
+Vairano Patenora,19,23,21.05
+Valle Agricola,3,2,-33.33
+Valle dell'Angelo,2,1,-50.0
+Vallesaccarda,5,4,-20.0
+Vallo della Lucania,26,23,-11.54
+Venticano,6,6,0.0
+Vibonati,10,7,-30.0
+Vietri sul Mare,26,21,-19.23
+Villa Literno,28,22,-21.43
+Villa di Briano,5,11,120.0
+Villamaina,2,4,100.0
 Villanova del Battista,11,12,9.09
+Visciano,16,14,-12.5
+Vitulano,6,10,66.67
+Vitulazio,27,14,-48.15
+Volla,50,39,-22.0
+Volturara Irpina,9,8,-11.11
+Zungoli,8,6,-25.0

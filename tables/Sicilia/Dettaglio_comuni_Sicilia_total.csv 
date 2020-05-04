@@ -1,44 +1,278 @@
 Comune,2019,2020,Variazione %
-Acate,16,21,31.25
-Agira,22,37,68.18
-Alia,19,11,-42.11
-Assoro,7,21,200.0
-Belpasso,63,51,-19.05
-Butera,20,16,-20.0
-Capri Leone,14,10,-28.57
-Caronia,19,11,-42.11
-Castelbuono,36,30,-16.67
-Castellana Sicula,18,17,-5.56
-Cattolica Eraclea,19,11,-42.11
-Cerda,18,16,-11.11
-Chiusa Sclafani,12,20,66.67
+Acate,15,20,33.33
+Aci Bonaccorsi,14,8,-42.86
+Acireale,165,149,-9.7
+Acquaviva Platani,5,6,20.0
+Acquedolci,25,25,0.0
+Agira,23,40,73.91
+Agrigento,202,163,-19.31
+Al,4,2,-50.0
+Al Terme,8,7,-12.5
+Alcara li Fusi,9,6,-33.33
+Alessandria della Rocca,15,15,0.0
+Alia,20,11,-45.0
+Alimena,9,9,0.0
+Aliminusa,9,7,-22.22
+Antillo,2,5,150.0
+Aragona,35,36,2.86
+Assoro,7,20,185.71
+Augusta,127,106,-16.54
+Avola,108,86,-20.37
+Bagheria,158,145,-8.23
+Barcellona Pozzo di Gotto,120,121,0.83
+Basic,2,2,0.0
+Baucina,10,8,-20.0
+Belpasso,61,53,-13.11
+Biancavilla,70,69,-1.43
+Bisacquino,21,26,23.81
+Bivona,14,18,28.57
+Blufi,5,4,-20.0
+Bolognetta,12,13,8.33
+Bompensiere,6,2,-66.67
+Borgetto,15,17,13.33
+Brolo,15,16,6.67
+Buccheri,2,4,100.0
+Buscemi,2,7,250.0
+Buseto Palizzolo,11,7,-36.36
+Butera,21,16,-23.81
+Caccamo,28,25,-10.71
+Calamonaci,7,8,14.29
+Calatabiano,16,14,-12.5
+Caltabellotta,26,20,-23.08
+Caltanissetta,231,192,-16.88
+Caltavuturo,15,13,-13.33
+Campobello di Licata,35,31,-11.43
+Campofelice di Fitalia,2,2,0.0
+Campofiorito,6,9,50.0
+Campofranco,11,11,0.0
+Camporeale,12,12,0.0
+Camporotondo Etneo,4,6,50.0
+Canicattini Bagni,28,25,-10.71
+Capaci,28,21,-25.0
+Capizzi,14,16,14.29
+Capo d'Orlando,40,39,-2.5
+Capri Leone,12,9,-25.0
+Carini,96,63,-34.38
+Carlentini,53,49,-7.55
+Caronia,18,14,-22.22
+Castelbuono,33,29,-12.12
+Casteldaccia,32,31,-3.12
+Castell'Umberto,23,12,-47.83
+Castellana Sicula,16,19,18.75
+Castelmola,6,6,0.0
+Castelvetrano,115,96,-16.52
+Castiglione di Sicilia,19,15,-21.05
+Castrofilippo,14,11,-21.43
+Castronovo di Sicilia,13,11,-15.38
+Castroreale,12,12,0.0
+Catania,1023,952,-6.94
+Catenanuova,16,14,-12.5
+Cattolica Eraclea,18,12,-33.33
+Cefal Diana,3,2,-33.33
+Cerami,9,8,-11.11
+Cerda,18,18,0.0
+Cesar,9,8,-11.11
+Chiaramonte Gulfi,30,32,6.67
+Chiusa Sclafani,14,18,28.57
+Cianciana,19,17,-10.53
+Ciminna,15,15,0.0
 Cinisi,38,42,10.53
-Contessa Entellina,13,14,7.69
-Erice,86,95,10.47
-Ficarra,6,11,83.33
-Francofonte,61,42,-31.15
-Furnari,16,14,-12.5
-Gibellina,23,18,-21.74
-Lascari,7,14,100.0
-Mazara del Vallo,132,153,15.91
+Comiso,93,84,-9.68
+Condr,6,3,-50.0
+Contessa Entellina,11,14,27.27
+Corleone,40,34,-15.0
+Erice,86,92,6.98
+Falcone,8,11,37.5
+Favignana,21,10,-52.38
+Ferla,10,7,-30.0
+Ficarazzi,25,21,-16.0
+Ficarra,6,12,100.0
+Fiumedinisi,7,4,-42.86
+Floresta,5,2,-60.0
+Fondachelli-Fantina,6,5,-16.67
+Forza d'Agr,2,2,0.0
+Francavilla di Sicilia,20,16,-20.0
+Francofonte,62,39,-37.1
+Frazzan,8,3,-62.5
+Furci Siculo,7,8,14.29
+Furnari,16,16,0.0
+Gaggi,8,8,0.0
+Gagliano Castelferrato,14,19,35.71
+Galati Mamertino,16,7,-56.25
+Gallodoro,1,0,-100.0
+Gangi,29,30,3.45
+Geraci Siculo,9,7,-22.22
+Giardinello,4,6,50.0
+Giardini-Naxos,29,34,17.24
+Giarratana,14,10,-28.57
+Gibellina,24,18,-25.0
+Gioiosa Marea,27,21,-22.22
+Godrano,2,5,150.0
+Graniti,4,4,0.0
+Gratteri,4,7,75.0
+Gravina di Catania,64,75,17.19
+Isnello,6,6,0.0
+Ispica,38,36,-5.26
+Joppolo Giancaxio,3,6,100.0
+Lascari,9,16,77.78
+Leni,1,3,200.0
+Lentini,96,79,-17.71
+Letojanni,14,8,-42.86
+Licata,118,102,-13.56
+Linguaglossa,20,13,-35.0
+Lipari,33,32,-3.03
+Longi,6,3,-50.0
+Lucca Sicula,9,6,-33.33
+Maletto,14,10,-28.57
+Malfa,4,2,-50.0
+Mandanici,4,1,-75.0
+Maniace,11,9,-18.18
+Marianopoli,7,7,0.0
+Marsala,303,280,-7.59
+Mascali,32,35,9.38
+Mascalucia,69,58,-15.94
+Mazara del Vallo,129,149,15.5
+Mazzarino,43,36,-16.28
+Mazzarr Sant'Andrea,3,8,166.67
 Melilli,40,35,-12.5
+Menfi,47,36,-23.4
+Mer,10,7,-30.0
+Messina,789,785,-0.51
+Mezzojuso,7,7,0.0
+Milazzo,104,95,-8.65
+Milena,13,15,15.38
+Militello Rosmarino,10,4,-60.0
+Militello in Val di Catania,30,26,-13.33
+Milo,5,6,20.0
+Mirto,3,7,133.33
+Misilmeri,73,81,10.96
+Mistretta,12,12,0.0
+Moio Alcantara,5,3,-40.0
+Monforte San Giorgio,8,10,25.0
+Mongiuffi Melia,5,3,-40.0
 Montagnareale,6,12,100.0
-Montallegro,11,14,27.27
-Montelepre,24,30,25.0
+Montallegro,13,16,23.08
+Montedoro,7,6,-14.29
+Montelepre,23,30,30.43
+Montemaggiore Belsito,11,13,18.18
+Monterosso Almo,8,10,25.0
+Montevago,13,6,-53.85
+Motta Camastra,4,5,25.0
+Motta d'Affermo,4,5,25.0
+Mussomeli,40,44,10.0
+Naso,12,13,8.33
+Nicolosi,21,18,-14.29
+Nicosia,48,57,18.75
 Nissoria,7,13,85.71
-Nizza di Sicilia,12,21,75.0
+Nizza di Sicilia,11,21,90.91
+Noto,75,72,-4.0
+Novara di Sicilia,11,9,-18.18
+Oliveri,9,6,-33.33
+Paceco,35,39,11.43
+Pagliara,5,4,-20.0
 Palazzo Adriano,4,13,225.0
-Pantelleria,21,30,42.86
-Patti,45,51,13.33
-Priolo Gargallo,28,28,0.0
-San Fratello,19,13,-31.58
-San Gregorio di Catania,34,34,0.0
+Palazzolo Acreide,34,30,-11.76
+Palermo,1980,1901,-3.99
+Pantelleria,20,30,50.0
+Partanna,30,40,33.33
+Partinico,95,80,-15.79
+Patern,132,110,-16.67
+Patti,45,50,11.11
+Petralia Sottana,12,8,-33.33
+Petrosino,24,24,0.0
+Pietraperzia,34,27,-20.59
+Poggioreale,5,5,0.0
+Polizzi Generosa,16,10,-37.5
+Pollina,13,6,-53.85
+Porto Empedocle,48,42,-12.5
+Pozzallo,62,42,-32.26
+Priolo Gargallo,28,27,-3.57
+Racalmuto,46,26,-43.48
+Raccuja,5,3,-40.0
+Raddusa,14,11,-21.43
+Raffadali,51,36,-29.41
+Ragalna,11,12,9.09
+Ragusa,257,232,-9.73
+Ramacca,39,25,-35.9
+Randazzo,39,45,15.38
+Ravanusa,35,40,14.29
+Realmonte,16,16,0.0
+Regalbuto,39,21,-46.15
+Reitano,7,5,-28.57
+Ribera,80,59,-26.25
+Roccafiorita,1,1,0.0
+Roccamena,5,7,40.0
+Roccapalumba,11,11,0.0
+Roccella Valdemone,5,4,-20.0
+Rod Milici,13,6,-53.85
+Rometta,27,19,-29.63
+Rosolini,68,67,-1.47
+Sambuca di Sicilia,23,17,-26.09
+San Biagio Platani,19,18,-5.26
+San Cipirello,17,16,-5.88
+San Cono,16,11,-31.25
+San Filippo del Mela,16,20,25.0
+San Giovanni Gemini,28,31,10.71
+San Giuseppe Jato,25,23,-8.0
+San Gregorio di Catania,32,37,15.62
+San Marco d'Alunzio,13,11,-15.38
+San Mauro Castelverde,9,5,-44.44
+San Pier Niceto,12,11,-8.33
+San Piero Patti,13,12,-7.69
+San Pietro Clarenza,22,13,-40.91
+San Salvatore di Fitalia,3,7,133.33
+San Vito Lo Capo,12,14,16.67
+Sant'Alessio Siculo,5,5,0.0
+Sant'Alfio,4,7,75.0
 Sant'Angelo di Brolo,17,20,17.65
-Santa Croce Camerina,20,26,30.0
+Santa Cristina Gela,4,1,-75.0
+Santa Croce Camerina,25,26,4.0
+Santa Domenica Vittoria,4,5,25.0
+Santa Elisabetta,5,8,60.0
+Santa Flavia,39,35,-10.26
+Santa Lucia del Mela,22,17,-22.73
 Santa Margherita di Belice,23,21,-8.7
-Spadafora,29,25,-13.79
-Terme Vigliatore,29,20,-31.03
-Tremestieri Etneo,55,59,7.27
+Santa Marina Salina,2,7,250.0
+Santa Venerina,23,24,4.35
+Santo Stefano di Camastra,20,18,-10.0
+Savoca,10,5,-50.0
+Scaletta Zanclea,8,7,-12.5
+Sciacca,142,118,-16.9
+Sciara,10,6,-40.0
+Scillato,1,3,200.0
+Sclafani Bagni,5,1,-80.0
+Scordia,53,40,-24.53
+Sinagra,13,6,-53.85
+Siracusa,376,363,-3.46
+Solarino,13,18,38.46
+Sommatino,23,19,-17.39
+Sortino,33,41,24.24
+Spadafora,28,25,-10.71
+Sperlinga,3,3,0.0
+Terme Vigliatore,25,20,-20.0
+Termini Imerese,85,80,-5.88
+Terrasini,41,35,-14.63
+Torregrotta,20,23,15.0
+Torrenova,7,8,14.29
+Torretta,10,13,30.0
+Trapani,216,215,-0.46
+Tremestieri Etneo,53,60,13.21
+Tripi,4,7,75.0
 Troina,37,37,0.0
-Valledolmo,17,18,5.88
-Vizzini,20,22,10.0
+Ucria,5,4,-20.0
+Ustica,1,3,200.0
+Valderice,34,38,11.76
+Valdina,3,4,33.33
+Valguarnera Caropepe,32,23,-28.12
+Valledolmo,16,18,12.5
+Vallelunga Pratameno,16,15,-6.25
+Venetico,6,6,0.0
+Ventimiglia di Sicilia,5,7,40.0
+Vicari,8,9,12.5
+Villabate,48,37,-22.92
+Villafranca Sicula,8,6,-25.0
+Villafranca Tirrena,31,29,-6.45
+Villalba,4,4,0.0
+Vita,11,6,-45.45
+Vizzini,21,22,4.76
+Zafferana Etnea,27,22,-18.52

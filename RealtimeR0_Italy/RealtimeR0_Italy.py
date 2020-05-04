@@ -105,6 +105,10 @@ states = pd.read_csv(url,
                      parse_dates=['data'],
                      squeeze=True).sort_index()
 
+## check datetime
+print("Analysis Updated to: {}".format(str(states.index.get_level_values('data')[-2]+pd.Timedelta(days=1))[:10]))
+
+
 # Italy as a whole
 reg_names = states.index.get_level_values(0).unique().to_list()
 Italy = states.reset_index()

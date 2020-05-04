@@ -54,7 +54,7 @@ The [src directory](./src) contains the necessary files to compute the ISTAT dat
 First Option:
 
 	1) Clone or download the repository (e.g. ```git clone```);
-	2) Run the script "./src/src_deceases_istat.py" with python3;
+	2) Run the script ```./src/src_deceases_istat.py``` with python3;
     3) Follow the instructions that the script provides you.
 
 Second Option (linux):
@@ -64,7 +64,7 @@ Second Option (linux):
     3) Follow the instructions that the script provides you.
 
 ### tables
-The [tables directory](./tables) contains the csv files obtained from the ISTAT data analysis. For example, what follows is the csv table for all municipalities in sample for my region (Marche):
+The [tables directory](./tables) contains the csv files obtained from the ISTAT data analysis, divided by regions and provinces. For example, what follows is the csv table for all municipalities in sample for Marche (region of central Italy):
 
 | **Comune**                 | **2019** | **2020** | **Variazione %** |
 |----------------------------|----------|----------|------------------|
@@ -90,7 +90,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 | Camerata Picena            | 2        | 3        | 50\.0            |
 | Camerino                   | 20       | 23       | 15\.0            |
 | Campofilone                | 7        | 9        | 28\.57           |
-| Camporotondo di Fiastrone  | 0        | 1        | inf              |
+| Camporotondo di Fiastrone  | 0        | 1        |                  |
 | Cantiano                   | 12       | 20       | 66\.67           |
 | Carassai                   | 4        | 4        | 0\.0             |
 | Cartoceto                  | 13       | 23       | 76\.92           |
@@ -133,7 +133,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 | Gradara                    | 7        | 18       | 157\.14          |
 | Grottammare                | 39       | 44       | 12\.82           |
 | Gualdo                     | 5        | 5        | 0\.0             |
-| Isola del Piano            | 0        | 2        | inf              |
+| Isola del Piano            | 0        | 2        |                  |
 | Jesi                       | 145      | 150      | 3\.45            |
 | Lapedona                   | 5        | 4        | \-20\.0          |
 | Loreto                     | 37       | 42       | 13\.51           |
@@ -159,7 +159,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 | Monte Cerignone            | 2        | 8        | 300\.0           |
 | Monte Giberto              | 5        | 3        | \-40\.0          |
 | Monte Grimano Terme        | 8        | 6        | \-25\.0          |
-| Monte Rinaldo              | 0        | 2        | inf              |
+| Monte Rinaldo              | 0        | 2        |                  |
 | Monte San Giusto           | 23       | 27       | 17\.39           |
 | Monte San Martino          | 2        | 5        | 150\.0           |
 | Monte San Pietrangeli      | 6        | 9        | 50\.0            |
@@ -183,7 +183,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 | Montegiorgio               | 22       | 29       | 31\.82           |
 | Montegranaro               | 29       | 39       | 34\.48           |
 | Montelabbate               | 9        | 22       | 144\.44          |
-| Monteleone di Fermo        | 0        | 1        | inf              |
+| Monteleone di Fermo        | 0        | 1        |                  |
 | Montelparo                 | 4        | 7        | 75\.0            |
 | Montelupone                | 13       | 11       | \-15\.38         |
 | Montemarciano              | 24       | 30       | 25\.0            |
@@ -263,7 +263,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 
 
 ### plot
-The [plot directory](./plot) contains the plots obtained from the ISTAT data analysis. For example, what follows is the plot for all Italy municipalities in sample:
+The [plot directory](./plot) contains the plots obtained from the ISTAT data analysis, divided by regions and provinces. For example, what follows is the plot for all Italy municipalities in sample:
 
 ![](./plot/covid_italy.png)
 

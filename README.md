@@ -53,13 +53,13 @@ The [src directory](./src) contains the necessary files to compute the ISTAT dat
 
 First Option:
 
-	1) Clone or download the repository (e.g. ```git clone```);
-	2) Run the script ```./src/src_deceases_istat.py``` with python3;
+	1) Clone or download the repository (e.g. git clone);
+	2) Run the script "./src/src_deceases_istat.py" with python3;
     3) Follow the instructions that the script provides you.
 
 Second Option (linux):
 
-	1) Clone or download the repository (e.g. ```git clone```);
+	1) Clone or download the repository (e.g. git clone);
 	2) Run the "run_istat.sh" bash script in the COVID19 folder;
     3) Follow the instructions that the script provides you.
 

@@ -121,7 +121,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 | Fano                       | 168      | 234      | 39\.29           |
 | Fermignano                 | 19       | 29       | 52\.63           |
 | Fermo                      | 148      | 159      | 7\.43            |
-| Fiastra                    | 0        | 1        | inf              |
+| Fiastra                    | 0        | 1        |                  |
 | Filottrano                 | 20       | 41       | 105\.0           |
 | Fiuminata                  | 3        | 5        | 66\.67           |
 | Folignano                  | 16       | 19       | 18\.75           |
@@ -131,7 +131,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 | Fratte Rosa                | 3        | 6        | 100\.0           |
 | Frontino                   | 1        | 0        | \-100\.0         |
 | Gabicce Mare               | 15       | 22       | 46\.67           |
-| Gagliole                   | 0        | 4        | inf              |
+| Gagliole                   | 0        | 4        |                  |
 | Gradara                    | 7        | 18       | 157\.14          |
 | Grottammare                | 39       | 44       | 12\.82           |
 | Gualdo                     | 5        | 5        | 0\.0             |

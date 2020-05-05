@@ -11,10 +11,10 @@ echo "Start Rt analysis."
 echo ""
 
 cd ../RealtimeR0_Italy 
-#python3 ReatimeR0_Italy.py
+python3 RealtimeR0_Italy.py
 echo ""
-echo "Open two summry plot"
+echo "Open two summary plot"
 cd .. 
 xdg-open ./RealtimeR0_Italy/rt_Italy.png
-xdg-opne ./plot/covid_italy.png
+xdg-open ./plot/covid_italy.png
 echo "ALL DONE!"

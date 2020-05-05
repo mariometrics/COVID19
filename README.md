@@ -65,9 +65,9 @@ Second Option (linux):
 
 ### tables
 The [tables directory](./tables) contains the csv files obtained from the ISTAT data analysis, divided by regions and provinces. For example, what follows is the csv table for all municipalities in sample for Marche (region of central Italy):
-|---------------------------------------------------------------------|
-|     **Dati dal 1 Gennaio al 31 Marzo per 192 comuni su 228**	      |
-|----------------------------|----------|----------|------------------|
+
+  **Dati dal 1 Gennaio al 31 Marzo per 192 comuni Marchigiani su 228 Totali**
+
 | **Comune**                 | **2019** | **2020** | **Variazione %** |
 |----------------------------|----------|----------|------------------|
 | Acqualagna                 | 14       | 12       | \-14\.29         |
@@ -262,8 +262,7 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 | Vallefoglia                | 25       | 54       | 116\.0           |
 | Venarotta                  | 9        | 7        | \-22\.22         |
 | Visso                      | 4        | 3        | \-25\.0          |
-|----------------------------|----------|----------|------------------|
- 
+
 
 ### plot
 The [plot directory](./plot) contains the plots obtained from the ISTAT data analysis, divided by regions and provinces. For example, what follows is the plot for all Italy municipalities in sample:

@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
-
 DIR=$(dirname $(realpath "$0"))
+
+pip3 install -r $DIR/requirements.txt 
+
 cd $DIR/src
 python3 src_deceases_istat.py
 echo ""
@@ -10,7 +12,7 @@ echo "ISTAT data analysis finished"
 echo "Start Rt analysis."
 echo ""
 
-cd ../RealtimeR0_Italy 
+cd ../RealtimeR0_Italy
 python3 RealtimeR0_Italy.py
 echo ""
 echo "Open two summary plot"

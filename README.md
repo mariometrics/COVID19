@@ -1,4 +1,18 @@
 # COVID19 ANALYSIS
+## How to run the analysis
+
+First Option:
+
+	1) Clone or download the repository (e.g. git clone);
+    2) Install the necessary libraries listed in "requirements.txt";
+    3) Run "./src/src_deceases_istat.py" with python;
+    4) Follow the instructions that the script provides you.
+
+Second Option (linux):
+
+	1) Clone or download the repository (e.g. git clone);
+	2) Run the "run.sh" bash script in the COVID19 folder;
+    3) Follow the instructions that the script provides you;
 
 ## Directory Structure
 ```.
@@ -48,20 +62,8 @@ COVID19/
     ├── Valle d'Aosta
     └── Veneto
 ```
-### src 
-The [src directory](./src) contains the necessary files to compute the ISTAT data analysis. The python script that compute the mentioned analysis can be executed in the following ways:
-
-First Option:
-
-	1) Clone or download the repository (e.g. git clone);
-	2) Run the script "./src/src_deceases_istat.py" with python3;
-    3) Follow the instructions that the script provides you.
-
-Second Option (linux):
-
-	1) Clone or download the repository (e.g. git clone);
-	2) Run the "run_istat.sh" bash script in the COVID19 folder;
-    3) Follow the instructions that the script provides you.
+### src
+The [src directory](./src) contains the necessary files to compute the ISTAT data analysis.
 
 ### tables
 The [tables directory](./tables) contains the csv files obtained from the ISTAT data analysis, divided by regions and provinces. For example, what follows is the csv table for all municipalities in sample for Marche (region of central Italy):
@@ -277,4 +279,3 @@ The [RealtimeR0_Italy directory](./RealtimeR0_Italy) contains my adaptation of t
 ![](./RealtimeR0_Italy/rt_Italy.png)
 
 ![](./RealtimeR0_Italy/likely_under_control_Italy.png)
-

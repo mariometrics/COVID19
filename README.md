@@ -6,13 +6,16 @@ First Option:
 	1) Clone or download the repository (e.g. git clone);
     2) Install the necessary libraries listed in "requirements.txt";
     3) Run "./src/src_deceases_istat.py" with python;
-    4) Follow the instructions that the script provides you.
+    4) Follow the instructions that the script provides you;
+	5) Run "./RealtimeR0_Italy/RealtimeR0_Italy.py" with python;
+	6) Explore the results.
 
 Second Option (linux):
 
 	1) Clone or download the repository (e.g. git clone);
 	2) Run the "run.sh" bash script in the COVID19 folder;
     3) Follow the instructions that the script provides you;
+	4) Explore the results.
 
 ## Directory Structure
 ```.

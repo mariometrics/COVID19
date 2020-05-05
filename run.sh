@@ -2,7 +2,7 @@
 set -e
 DIR=$(dirname $(realpath "$0"))
 
-pip3 install -r $DIR/requirements.txt 
+pip3 install -r $DIR/requirements.txt --upgrade
 
 cd $DIR/src
 python3 src_deceases_istat.py

@@ -66,10 +66,10 @@ COVID19/
     └── Veneto
 ```
 ### src
-The [src directory](./src) contains the necessary files to compute the ISTAT data analysis.
+The [src directory](./src) contains the necessary files to compute the [ISTAT mortality data](https://www.istat.it/en/archivio/242152) analysis.
 
 ### tables
-The [tables directory](./tables) contains the csv files obtained from the ISTAT data analysis, divided by regions and provinces. For example, what follows is the csv table for all municipalities in sample for Marche (region of central Italy):
+The [tables directory](./tables) contains the csv files obtained from the [ISTAT mortality data](https://www.istat.it/en/archivio/242152) analysis, divided by regions and provinces. For example, what follows is the csv table for all municipalities in sample for Marche (region of central Italy):
 
   **Dati dal 1 Gennaio al 31 Marzo per 192 comuni Marchigiani su 228 Totali**
 
@@ -270,12 +270,12 @@ The [tables directory](./tables) contains the csv files obtained from the ISTAT 
 
 
 ### plot
-The [plot directory](./plot) contains the plots obtained from the ISTAT data analysis, divided by regions and provinces. For example, what follows is the plot for all Italy municipalities in sample:
+The [plot directory](./plot) contains the plots obtained from the [ISTAT mortality data](https://www.istat.it/en/archivio/242152) analysis, divided by regions and provinces. For example, what follows is the plot for all Italy municipalities in sample:
 
 ![](./plot/covid_italy.png)
 
 ### RealtimeR0_Italy
-The [RealtimeR0_Italy directory](./RealtimeR0_Italy) contains my adaptation of the [Kevyn Systrom code](https://github.com/k-sys/covid-19/blob/master/Realtime%20R0.ipynb) for Italy data on COVID19 confirmed cases. The code estimates Rt with a time-varying Bayesian approach, for details visit the [Kevin Systrom code](https://github.com/k-sys/covid-19/blob/master/Realtime%20R0.ipynb). Some of the results plot are:
+The [RealtimeR0_Italy directory](./RealtimeR0_Italy) contains my adaptation of the [Kevyn Systrom code](https://github.com/k-sys/covid-19/blob/master/Realtime%20R0.ipynb) for [Italy data on COVID19 confirmed cases](https://github.com/pcm-dpc/COVID-19). The code estimates Rt with a time-varying Bayesian approach, for details visit the [Kevin Systrom code](https://github.com/k-sys/covid-19/blob/master/Realtime%20R0.ipynb). Some of the results plot are:
 
 ![](./RealtimeR0_Italy/Italy_smoothed.png)
 
